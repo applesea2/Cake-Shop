@@ -1,6 +1,5 @@
 ﻿namespace CakeShop.Models;
 
-public class Orders
+public class AboutUsModel
 {
-    
 }
