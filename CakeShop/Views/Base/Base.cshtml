@@ -1,0 +1,70 @@
+﻿@model Orders
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- "Home - Jesse's Homemade Cakes", "Jesse's Homemade Cakes" -->
+    <!-- Use extended template title. How do we dynamically add a "-" deliminator if title section is present? -->
+    <title>@RenderSection("title", required: false) Jesse's Homemade Cakes</title>
+    
+    <link rel="stylesheet" type="text/css" href="">
+    
+    @RenderSection("stylesheets", required: false)
+</head>
+    
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <p>
+                            <img src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#">Home</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#">Menu</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#">Contact Us</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#">Order</a>
+                        </p>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            @RenderSection("content", required: false)
+        </main>
+    
+        <footer>
+            <p>
+                Made by Jesse & Zowie
+            </p>
+        </footer>
+
+        @RenderSection("scripts", required: false)
+</body>
+    
+</html>
