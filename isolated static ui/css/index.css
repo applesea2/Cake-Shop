@@ -1,0 +1,8 @@
+
+
+.header {
+    & .header__ul {
+        display: flex;
+        list-style-type: none;
+    }
+}

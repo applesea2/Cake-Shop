@@ -1,0 +1,12 @@
+﻿https://iconduck.com/icons/178865/heart
+https://iconduck.com/icons/78978/cake-3-line
+
+https://iconduck.com/icons/8057/cake-two
+https://iconduck.com/icons/21119/facebook
+https://iconduck.com/icons/121516/instagram-rounded-filled
+
+https://iconduck.com/icons/155100/cake
+
+https://iconduck.com/icons/35264/cake -- apache 2.0
+
+add what license an icon uses to all attributed icons

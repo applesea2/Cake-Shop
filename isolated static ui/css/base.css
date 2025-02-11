@@ -1,0 +1,90 @@
+
+/*========
+CSS Reset
+==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+We need html to be 100%, otherwise its
+default length values of auto will cause an infinite loop with its body child,
+as auto tries to take on the width/height of its child, while the body tries to take up
+100% width/height of its parent.
+*/
+html, body {
+    width: 100%;
+    height: 100%;
+    
+    font-family: "Arima";
+}
+
+/*========
+Flexible layout - sticky footer pattern:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#alternate_method
+==========*/
+
+.flexible-layout {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    
+    header {
+        flex-shrink: 0;
+    }
+    
+    main {
+        /* shrinks shrinkable content by default which is good for small
+        screen sizes */
+        /* expand content along main-axis to fill available free space within container */
+        flex-grow: 1;
+    }
+    
+    footer {
+        flex-shrink: 0;
+    }
+}
+
+/*========
+Pink outline gradient around the content
+
+Outer-background applies to the body
+Inner-background applies to the flexible-layout div
+==========*/
+
+.outer-background {
+    background: rgb(253,136,153);
+    background: linear-gradient(90deg, rgba(253,136,153,1) 0%, rgba(252,164,176,1) 100%); 
+    padding: .42rem;
+}
+
+.inner-background {
+    /* default bg-color is transparent, so se it to be white */
+    background-color: white;
+}
+
+/*========
+Header navbar
+==========*/
+
+.navbar {
+    
+    width: 100%;
+    list-style-type: none;
+    
+    display: flex;
+    gap: 3rem;
+    margin-left: 4.2rem;
+    
+    outline: 1px solid red;
+    
+    
+    & .navbar__item {
+        color: #FD8899;
+    }
+}
