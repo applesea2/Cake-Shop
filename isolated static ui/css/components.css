@@ -1,0 +1,50 @@
+.btn {
+    border: none;
+    background: none;
+    /* inherit from body */
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn--order-btn {
+    text-decoration: none;    
+    color: #FF7C8F;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 3px solid #FD8899;
+    padding: .45rem 4rem;
+    position: relative;
+    
+    /* &::after {
+        content: "";
+        
+        /* why do EM units mess up the vertical alignment?
+        also small dimensions mess up the svg.. 
+        width: 1.8rem;
+        aspect-ratio: 1/1;
+
+        background-color: #97345c;
+        mask: url("../svg/launch-link-open.svg") no-repeat center;
+        mask-size: 1.4rem;
+        
+        display: inline-block;
+        /* position absolute relative to --order-btn 
+        position: absolute;
+        
+        transition: .2s ease-out transform;
+    }
+    &:hover::after {
+        transform: translate3d(3px, -2px, 0);
+    } */
+    
+    transition: .5s box-shadow, .3s scale, .3s border-radius;
+    &:hover {
+        box-shadow: 0 2px 3px rgba(205, 28, 28, 0.279);
+        scale: 1.03;
+    }
+    &:active {
+        scale: 1;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(146, 205, 28, 0.11);
+    }
+}

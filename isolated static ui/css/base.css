@@ -112,3 +112,12 @@ Header navbar
         }
     }
 }
+
+/*========
+User agent overrides
+==========*/
+
+h1 {
+    color: #FD8899;
+    font-size: 6rem;
+}

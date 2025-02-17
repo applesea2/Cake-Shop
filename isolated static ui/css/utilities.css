@@ -2,6 +2,26 @@
     display: none;
 }
 
+/* Debug utilities */
+.ol-on {
+    outline: 1px solid red;
+}
+
+/* Typography utilities */
+.text-center {
+    text-align: center;
+}
+
+.lh-small {
+    line-height: 1.035;
+}
+
+/* Sizing utilities */
+.w-40rem {
+    width: 40rem;
+}
+
+
 /* Spacing utilities */
 
 .mt-4rem {
@@ -18,8 +38,8 @@
     flex-direction: column;
 }
 
-.space-between {
-    align-content: space-between;
+.justify-space-between {
+    justify-content: space-between;
 }
 
 .align-center {
