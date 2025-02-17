@@ -1,8 +1,10 @@
 
-
-.header {
-    & .header__ul {
-        display: flex;
-        list-style-type: none;
+.hero {
+    .hero__showcase {
+        .hero__
     }
+}
+
+.photo {
+    
 }
