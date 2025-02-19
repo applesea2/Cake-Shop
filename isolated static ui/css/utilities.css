@@ -16,6 +16,16 @@
     line-height: 1.035;
 }
 
+.fs-medium {
+    font-size: 24px;
+}
+
+.dotted-anchor {
+    text-decoration-style: dotted;
+    text-decoration-thickness: 12.5%;
+    text-underline-offset: 15.5%;
+}
+
 /* Sizing utilities */
 .w-40rem {
     width: 40rem;

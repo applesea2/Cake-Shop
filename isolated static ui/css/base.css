@@ -121,3 +121,18 @@ h1 {
     color: #FD8899;
     font-size: 6rem;
 }
+
+p {
+    font-family: "Quicksand";
+    color: #FD8899;
+    font-weight: bold;
+}
+
+a {
+    color: #CE6372;
+    
+    transition: .4s color;
+    &:hover {
+        color: #792b38;
+    }
+}
