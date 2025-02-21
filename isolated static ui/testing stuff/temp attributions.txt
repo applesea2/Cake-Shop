@@ -11,4 +11,6 @@ https://iconduck.com/icons/35264/cake -- apache 2.0
 
 https://iconduck.com/icons/117855/launch-link-open - mit
 
+https://iconduck.com/icons/2221/phone
+
 add what license an icon uses to all attributed icons
