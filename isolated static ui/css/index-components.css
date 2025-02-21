@@ -22,6 +22,7 @@ Figure & Figcaption photo Component
     --ribbon-sides-height: calc(var(--caption-font-size) + (var(--caption-tb-padding) * 2) - .6em);
     --img-border-size: .2rem;
     
+    
     .photo__img {
         width: var(--photo-width);
         height: var(--photo-height);
