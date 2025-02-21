@@ -1,4 +1,3 @@
-
 /*========
 CSS Reset
 ==========*/
@@ -117,6 +116,10 @@ Header navbar
 User agent overrides
 ==========*/
 
+*::selection {
+    background-color: #f7a5b045;    
+}
+
 h1 {
     color: #FD8899;
     font-size: 6rem;
@@ -135,4 +138,25 @@ a {
     &:hover {
         color: #792b38;
     }
+}
+
+
+/* y does this not work */
+a[href^="tel:"] { 
+    &:hover {
+        scale: 1.5 !important;
+    }
+}
+
+/* Phone icon before telephone links */
+a[href^="tel:"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    /* achieve an svg color fill via mask */
+    background-color: rgb(94, 71, 70);
+    mask: url("../svg/phone.svg") no-repeat center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
 }

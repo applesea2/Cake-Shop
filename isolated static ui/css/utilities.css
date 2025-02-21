@@ -21,9 +21,12 @@
 }
 
 .dotted-anchor {
-    text-decoration-style: dotted;
+    /* text-decoration-style: dotted;
     text-decoration-thickness: 12.5%;
-    text-underline-offset: 15.5%;
+    text-underline-offset: 15.5%; */
+    text-decoration: none;
+    border-bottom: 3px dotted;
+    
 }
 
 /* Sizing utilities */
@@ -33,6 +36,10 @@
 
 
 /* Spacing utilities */
+
+.mt-1rem {
+    margin-top: 1rem;
+}
 
 .mt-4rem {
     margin-top: 4rem;

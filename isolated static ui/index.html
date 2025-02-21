@@ -8,10 +8,13 @@
         <!-- todo: research favicons, implement responsive dpi versions -->
         <!-- todo: improve icon design -->
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="./css/base.css">
+        <link rel="stylesheet" type="text/css" href="./css/base-overrides.css">
         <link rel="stylesheet" type="text/css" href="./css/index.css">
         <link rel="stylesheet" type="text/css" href="./css/utilities.css">
-        <link rel="stylesheet" type="text/css" href="./css/components.css">
+        <!-- Load index components after index, as some index components
+         override base rules via BEM modifiers (i.e CSS cascade is in effect). -->
+        <link rel="stylesheet" type="text/css" href="./css/base-components.css">
+        <link rel="stylesheet" type="text/css" href="./css/index-components.css">
         
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,9 +92,13 @@
                     
                     <div class="flex direction-column align-center d-relative left-5">
                         <p class="fs-medium">
-                            Call <a class="dotted-anchor" href="tel:1-555-4722">+1 555-4722</a>
+                            <a class="dotted-anchor" href="tel:1-555-4722">
+                                +1 (555) 555-4722
+                            </a>
                         </p>
-                        
+                        <p class="mt-1rem">
+                            Call us 9am-5pm
+                        </p>
                         <p>
                             Cakes available for pick-up & delivery
                         </p>

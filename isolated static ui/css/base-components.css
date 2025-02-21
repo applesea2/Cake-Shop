@@ -1,0 +1,23 @@
+
+
+.btn {
+    border: none;
+    background: none;
+    /* inherit from body */
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.icon {
+    
+}
+
+.icon--facebook-fill {
+    
+}
+
+/* todo */
+.icon--instagram-fill path {
+    outline: 5px solid green;
+    background: radial-gradient(203.57% 116.33% at 75% 15.63%, #FF00B3 0%, #833AB4 26.1%, #FD1D1D 67%, #FD7227 75.1%, #FCB045 100%);
+}
