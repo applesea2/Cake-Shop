@@ -1,4 +1,4 @@
-﻿@model MenuModel
+﻿@model CakeShop.Entities.Item
 
 @{
     Layout = null;
@@ -8,11 +8,35 @@
 
 <html lang="en-us">
 <head>
-    <title>Orders</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Menu</title>
+    <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true"/>
 </head>
 <body>
-<div>
-    <main>Welcome to the cake shop</main>
+<div class="container">
+    <h1>Menu</h1>
+    
+    <h2>Specialty Cakes</h2>
+    <div class="item">Matcha White Chocolate Cake</div>
+    <div class="item">Salted Caramel Espresso Cake</div>
+    <div class="item">Chili Chocolate Cake</div>
+    <div class="item">Lavender Honey Cake</div>
+        
+    <h2>Seasonal Treats</h2>
+    <div class="item">Pumpkin Spice Cake (Fall)</div>
+    <div class="item">Peppermint Mocha Cake (Winter)</div>
+    <div class="item">Strawberry Shortcake (Spring)</div>
+        
+    <h2>Custom Creations</h2>
+    <div class="item">Vegan & Gluten-Free Cakes</div>
+    <div class="item">Alcohol-Infused Cakes</div>
+    <div class="item">Mini Cakes & Cake Jars</div>
+    <div class="item">Ice Cream Cakes</div>
+    <div class="item">Carrot Cake</div>
+    <div class="item">Cheesecake</div>
+    <div class="item">German Chocolate Cake</div>
+    <div class="item">Black Forest cake</div>
 </div>
 </body>
 </html>

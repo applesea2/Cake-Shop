@@ -1,0 +1,28 @@
+body{
+    font-family: 'Georgia', serif;
+    background-color: #f8f1e4;
+    color: #5a3e36;
+    text-align: center;
+    padding: 10em;
+}
+.container{
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.item{
+    font-size: 18px;
+    padding: 5px 0
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Brush Script MT', cursive;
+}
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
