@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CakeShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad2545bb516c5c09d1d4a70c6193d79068078c62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7353403063716af37485764a1cef6692395d60a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CakeShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CakeShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
