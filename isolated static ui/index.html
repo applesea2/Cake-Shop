@@ -64,20 +64,23 @@
                 </nav>
             </header>
             
-            <main class="flex">
-                <div class="flex grow-1 direction-column justify-space-between align-center">
+            <main class="flex align-center">
+                <div class="flex grow-1 direction-column justify-space-between align-center h-30rem">
                     <h1 class="w-40rem text-center lh-small">Cute Cakes Only For You</h1>
                     
                     <a class="btn btn--order-btn svg-right-arrow" href="#">
                         order now
                     </a>
                     
-                    <div class="flex justify-center">
-                        <!-- we use an embed here, as an svg linked to an <img>
-                         cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
-                        <embed width="64" type="image/svg+xml" src="./svg/instagram-icon.svg" aria-description="Instagram Logo">
-                        <!-- todo: apply a gradient to the fb svg -->
-                        <img width="64" src="./svg/facebook-icon.svg" alt="Instagram Logo">
+                    <div class="flex justify-center g-075">
+                        <a target="_blank" href="https://www.facebook.com/">
+                            <img class="icon" src="./svg/facebook-icon.svg" alt="Instagram Logo">
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/">
+                            <!-- we use an embed here, as an svg linked to an <img>
+                             cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
+                            <embed class="icon icon--instagram" type="image/svg+xml" src="./svg/instagram-icon.svg" aria-description="Instagram Logo">
+                        </a>
                     </div>
                 </div>
                 
