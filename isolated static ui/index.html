@@ -72,14 +72,13 @@
                         order now
                     </a>
                     
-                    <div class="flex justify-center ol-on">
-                        <!-- having some trouble here.... -->
-                        <img class="icon icon--instagram-fill" src="./svg/instagram-icon.svg" alt="Instagram Logo">
+                    <div class="flex justify-center">
+                        <!-- we use an embed here, as an svg linked to an <img>
+                         cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
+                        <embed width="64" type="image/svg+xml" src="./svg/instagram-icon.svg" aria-description="Instagram Logo">
+                        <!-- todo: apply a gradient to the fb svg -->
+                        <img width="64" src="./svg/facebook-icon.svg" alt="Instagram Logo">
                     </div>
-                    <!-- <img class="icon icon--facebook-fill" src="./svg/facebook-icon.svg" alt="Facebook Logo">
-                    <img class="icon icon--instagram-fill" src="" alt="Instagram Logo">
-                    <svg class="icon icon--instagram-fill" fill="white" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m504 256c0-137-111-248-248-248s-248 111-248 248c0 123.78 90.69 226.38 209.25 245v-173.31h-63v-71.69h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73v46.55h68.78l-11 71.69h-57.78v173.31c118.56-18.62 209.25-121.22 209.25-245z"/></svg> -->
-                    
                 </div>
                 
                 <div class="flex grow-1 direction-column align-center justify-center">
