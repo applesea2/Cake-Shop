@@ -1,18 +1,53 @@
 ﻿@model ContactUsModel
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-
-<html>
 <head>
-    <title>title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/ContactUs.css" asp-append-version="true"/>
 </head>
 <body>
-<div>
-      
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Contact Us</h1>
+            <p>Thanks for stopping by! Drop us a message or give us a call, and we'll get back to you as soon as we can.</p>
+            <address>
+                <div class="mb-3">
+                    <i class="fa fa-map-marker-alt">2535 Kate St Holt, MI 48842</i>
+                </div>
+                <div class="mb-3">
+                    <i class="fa fa-phone">Phone: <a href="tel:+12486866636">(248) 686-6636</a></i>
+                </div>
+                <div class="mb-3">
+                    <i class="fa fa-envelope-o">Email: <a href="mailto:stroster.jesse@gmail.com">stroster.jesse@gmail.com</a></i>
+                </div>
+            </address>
+        </div>
+        <div class="col-md-4 mx-auto">
+            <form method="post" accept-charset="UTF-8">
+                <div class="row mb-3">
+                    <label class="form-label" for="fname">First Name</label>
+                    <input class="form-control" type="text" id="fname" name="firstname">
+                </div>
+                <div class="row mb-3">
+                    <label class="form-label" for="lname">Last Name</label>
+                    <input class="form-control" type="text" id="lname" name="lastname">
+                </div>
+                <div class="row mb-3">
+                    <label class="form-label" for="subject">Subject</label>
+                    <textarea class="form-control" id="subject" name="subject" style="height:200px"></textarea>
+                </div>
+                <div class="row mb-3">
+                    <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
-</html>
