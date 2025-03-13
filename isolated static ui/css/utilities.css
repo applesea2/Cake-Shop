@@ -86,3 +86,14 @@
 .g-075 {
     gap: 0.75rem;
 }
+
+
+.animate {
+    transition: .3s scale ease;
+    &:hover {
+        scale: 1.05;
+    }
+    &:active {
+        scale: .85;
+    }
+}
