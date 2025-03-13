@@ -7,6 +7,14 @@ CSS Reset
     box-sizing: border-box;
 }
 
+/*========
+Repeated global variables
+==========*/
+:root {
+    --inner-background-color: #FFF3F3;
+    --outer-background-color: rgb(253,136,153);
+}
+
 /*
 We need html to be 100%, otherwise its
 default length values of auto will cause an infinite loop with its body child,
@@ -72,33 +80,46 @@ Inner-background applies to the flexible-layout div
 ==========*/
 
 .outer-background {
-    background: rgb(253,136,153);
-    background: linear-gradient(90deg, rgba(253,136,153,1) 0%, rgba(252,164,176,1) 100%); 
+    
+    background: linear-gradient(90deg, var(--outer-background-color) 0%, rgba(252,164,176) 100%); 
     padding: .52rem;
 }
 
 .inner-background {
     /* default bg-color is transparent, so set it to be whitish */
-    background-color: #FFF3F3;
+    background-color: var(--inner-background-color);
 }
 
 /*========
 Header navbar
 ==========*/
 
-.navbar {
-    
+.header {
     width: 100%;
+    padding: 4rem 6.5rem;
+    background: 
+                linear-gradient(180deg, var(--inner-background-color), 35%, transparent),
+                linear-gradient(90deg, var(--inner-background-color), 15%, transparent),
+                linear-gradient(270deg, var(--inner-background-color), 15%, transparent),
+                linear-gradient(0deg, var(--inner-background-color), 65%, transparent),
+                url(../images/header-bg.jpg) 100% 50%;
+    
+}
+nav {
+    height: 100%;
+}
+.navbar {
+    width: fit-content;
     list-style-type: none;
     
     display: flex;
     gap: 6rem;
-    margin-left: 6.5rem;
+    height: 100%;
     
     & .navbar__item {
         
         & .navbar__link {
-            color: #FD8899;
+            color: #e35369;
             font-size: 1.6rem;
             font-family: "Arima";
    
