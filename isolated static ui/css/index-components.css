@@ -20,8 +20,19 @@ Hero Component
 }
 
 /*========
+Info & Figcaption positioning trick to properly position it
+==========*/
+
+.test {
+    position: absolute;
+    top: 8rem;
+    right: 6rem;
+}
+
+/*========
 Figure & Figcaption photo Component
 ==========*/
+
 .photo {
     --photo-width: 314px;
     --photo-height: 422px;
@@ -31,7 +42,6 @@ Figure & Figcaption photo Component
     /* take on height of caption content (font-size) & caption height padding, then take off some EM */
     --ribbon-sides-height: calc(var(--caption-font-size) + (var(--caption-tb-padding) * 2) - .6em);
     --img-border-size: .2rem;
-
     
     .photo__img {
         width: var(--photo-width);

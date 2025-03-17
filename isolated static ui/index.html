@@ -16,6 +16,9 @@
         <link rel="stylesheet" type="text/css" href="./css/base-components.css">
         <link rel="stylesheet" type="text/css" href="./css/index-components.css">
         
+        <!-- Ugly Bugly but for the vine (job interview) -->
+        <link rel="stylesheet" type="text/css" href="./css/hacked-in-responsiveness.css">
+        
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,14 +30,14 @@
 
         <title>Jesse's Homemade Cakes</title>
     </head>
-    <body class="outer-background">
-        <div class="flexible-layout inner-background">
+    <body>
+        <div class="flexible-layout">
             <!-- semantic: so we don't need bem. our components just
              happen to be nested inside them. -->
-            <header class="header">
+            <header>
                 <nav>
                     <ul class="navbar">
-                        <!--  todo: hire an artist to make a logo -->
+                        <!--  todo: hire an artist to make a company logo -->
                         <li class="navbar__item hidden">
                             <p>
                                 <img class="logo" src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
@@ -84,32 +87,36 @@
                     </div>
                 </div>
                 
+                <!-- todo: make this its own component, make it super BEMy -->
+                <!-- todo: remove technical hackery and debt -->
                 <div class="flex grow-1 direction-column align-center justify-center">
-                    <figure class="photo">
-                        <img class="photo__img" src="./images/cupcakes.jpg" alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
-                        <figcaption class="photo__caption photo__caption--ribboned">
-                            Delightful Handheld Joy
-                        </figcaption>
-                    </figure>
-                    
-                    <div class="flex direction-column align-center d-relative left-5">
-                        <p class="fs-medium">
-                            <a class="dotted-anchor" href="tel:1-555-4722">
-                                +1 (555) 555-4722
-                            </a>
-                        </p>
-                        <p class="mt-1rem">
-                            Call us 9am-5pm
-                        </p>
-                        <p>
-                            Cakes available for pick-up & delivery
-                        </p>
+                    <div class="test">
+                        <figure class="photo">
+                            <img class="photo__img" src="./images/cupcakes.jpg" alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
+                            <figcaption class="photo__caption photo__caption--ribboned">
+                                Delightful Handheld Joy
+                            </figcaption>
+                        </figure>
+                        
+                        <div class="flex direction-column align-center d-relative left-5">
+                            <p class="fs-medium">
+                                <a class="dotted-anchor" href="tel:1-555-4722">
+                                    +1 (555) 555-4722
+                                </a>
+                            </p>
+                            <p class="mt-1rem">
+                                Call us 9am-5pm
+                            </p>
+                            <p>
+                                Cakes available for pick-up & delivery
+                            </p>
+                        </div>
                     </div>
                 </div>
             </main>
             
             <footer>
-                <p>test</p>
+                <!-- Nothing yet... -->
             </footer>
         </div>
     </body>

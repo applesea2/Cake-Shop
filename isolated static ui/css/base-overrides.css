@@ -22,6 +22,7 @@ as auto tries to take on the width/height of its child, while the body tries to 
 100% width/height of its parent.
 */
 html, body {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     
@@ -48,13 +49,28 @@ Flexible layout - sticky footer pattern:
 https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#alternate_method
 ==========*/
 
+body {
+    background-color: var(--inner-background-color);
+    
+    border-image: linear-gradient(90deg, var(--outer-background-color) 0%, rgba(252,164,176) 100%)
+    27 / .52rem;
+    
+    /* Mimick a border w/ `box-sizing: border-box` and shrink the content box */
+    /* have this be present only on pages that overflow */
+    /* padding: .52rem; */
+    
+    
+    /* Extend past the viewport height if needed due to flexible-layout overflow */
+    min-height: 100%;
+    height: auto;
+}
+
 .flexible-layout {
     width: 100%;
     height: 100%;
     
     display: flex;
     flex-direction: column;
-
     
     header {
         flex-shrink: 0;
@@ -79,20 +95,21 @@ Outer-background applies to the body
 Inner-background applies to the flexible-layout div
 ==========*/
 
-.outer-background {
+/* .outer-background {
     background: linear-gradient(90deg, var(--outer-background-color) 0%, rgba(252,164,176) 100%); 
     padding: .52rem;
 }
 
 .inner-background {
-    /* default bg-color is transparent, so set it to be whitish */
-    background-color: var(--inner-background-color);
+    default bg-color is transparent, so set it to be whitish 
+    background-color: var(--inner-background-color); 
 }
+*/
 
 /*========
 Header navbar
 ==========*/
-.header {
+header {
     width: 100%;
 }
 
@@ -120,7 +137,6 @@ nav {
     
     
     & .navbar__item {
-        
         & .navbar__link {
             color: #e35369;
             font-size: 1.6rem;
@@ -144,7 +160,7 @@ nav {
     Note: Header and descendants are completely outside of the document flow
       in order to work around a Firefox gradient render issue.
     */
-    .header {
+    header {
         width: 100%;
         position: relative;
     }
