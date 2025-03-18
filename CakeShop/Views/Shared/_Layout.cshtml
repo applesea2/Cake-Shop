@@ -3,14 +3,62 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - CakeShop</title>
     <script type="importmap"></script>
+    <!-- todo: research favicons, implement responsive dpi versions -->
+    <!-- todo: improve icon design -->
+    <link rel="icon" type="image/x-icon" href="~/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="~/css/base-overrides.css">
+    <link rel="stylesheet" type="text/css" href="~/css/utilities.css">
+    <!-- Load index components after index, as some index components
+    override base rules via BEM modifiers (i.e CSS cascade is in effect). -->
+    <link rel="stylesheet" type="text/css" href="~/css/base-components.css">
+    <link rel="stylesheet" type="text/css" href="~/css/index-components.css">
+        
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/CakeShop.styles.css" asp-append-version="true"/>
 </head>
 <body>
-<header>
+<header class="mt-4rem">
+    <nav>
+        <ul class="navbar">
+            <!--  todo: hire an artist to make a logo -->
+            <li class="navbar__item hidden">
+                <p>
+                    <img class="logo" src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
+                </p>
+            </li>
+            <li class="navbar__item">
+                <p>
+                    <a class="navbar__link" href="#">Home</a>
+                </p>
+            </li>
+            <li class="navbar__item">
+                <p>
+                    <a class="navbar__link" href="#">Menu</a>
+                </p>
+            </li>
+            <li class="navbar__item">
+                <p>
+                    <a class="navbar__link" href="#">Contact Us</a>
+                </p>
+            </li>
+            <li class="navbar__item"> 
+                <p>
+                    <a class="navbar__link" href="#">About Us</a>
+                </p>
+            </li>
+        </ul>
+    </nav>
+</header>
+@*<header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CakeShop</a>
@@ -36,7 +84,7 @@
             </div>
         </div>
     </nav>
-</header>
+</header>*@
 <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
