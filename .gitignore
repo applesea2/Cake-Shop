@@ -1,1 +1,5 @@
 ﻿/CakeShop/wwwroot/cake.xcf
+**/obj/
+**/bin/
+/.vs/
+/.idea/

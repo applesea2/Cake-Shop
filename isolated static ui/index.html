@@ -16,6 +16,9 @@
         <link rel="stylesheet" type="text/css" href="./css/base-components.css">
         <link rel="stylesheet" type="text/css" href="./css/index-components.css">
         
+        <!-- Ugly Bugly but for the vine (job interview) -->
+        <link rel="stylesheet" type="text/css" href="./css/hacked-in-responsiveness.css">
+        
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,14 +30,14 @@
 
         <title>Jesse's Homemade Cakes</title>
     </head>
-    <body class="outer-background">
-        <div class="flexible-layout inner-background">
+    <body>
+        <div class="flexible-layout">
             <!-- semantic: so we don't need bem. our components just
              happen to be nested inside them. -->
-            <header class="mt-4rem">
+            <header>
                 <nav>
                     <ul class="navbar">
-                        <!--  todo: hire an artist to make a logo -->
+                        <!--  todo: hire an artist to make a company logo -->
                         <li class="navbar__item hidden">
                             <p>
                                 <img class="logo" src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
@@ -65,51 +68,55 @@
             </header>
             
             <main class="flex align-center">
-                <div class="flex grow-1 direction-column justify-space-between align-center h-30rem">
-                    <h1 class="w-40rem text-center lh-small">Cute Cakes Only For You</h1>
+                <div class="hero grow-1">
+                    <h1 class="hero__heading1">Cute Cakes Only For You</h1>
                     
                     <a class="btn btn--order-btn svg-right-arrow" href="#">
                         order now
                     </a>
                     
-                    <div class="flex justify-center g-075">
-                        <a target="_blank" href="https://www.facebook.com/">
-                            <img class="icon" src="./svg/facebook-icon.svg" alt="Instagram Logo">
+                    <div class="icon-section">
+                        <a class="animate" target="_blank" href="https://www.facebook.com/">
+                            <img class="icon-section__icon" src="./svg/facebook-icon.svg" alt="Instagram Logo">
                         </a>
-                        <a target="_blank" href="https://www.instagram.com/">
+                        <a class="animate" target="_blank" href="https://www.instagram.com/">
                             <!-- we use an embed here, as an svg linked to an <img>
                              cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
-                            <embed class="icon icon--instagram" type="image/svg+xml" src="./svg/instagram-icon.svg" aria-description="Instagram Logo">
+                            <embed class="icon-section__icon icon-section__icon--instagram" type="image/svg+xml" src="./svg/instagram-icon.svg" aria-description="Instagram Logo">
                         </a>
                     </div>
                 </div>
                 
+                <!-- todo: make this its own component, make it super BEMy -->
+                <!-- todo: remove technical hackery and debt -->
                 <div class="flex grow-1 direction-column align-center justify-center">
-                    <figure class="photo">
-                        <img class="photo__img" src="./images/cupcakes.jpg" alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
-                        <figcaption class="photo__caption photo__caption--ribboned">
-                            Delightful Handheld Joy
-                        </figcaption>
-                    </figure>
-                    
-                    <div class="flex direction-column align-center d-relative left-5">
-                        <p class="fs-medium">
-                            <a class="dotted-anchor" href="tel:1-555-4722">
-                                +1 (555) 555-4722
-                            </a>
-                        </p>
-                        <p class="mt-1rem">
-                            Call us 9am-5pm
-                        </p>
-                        <p>
-                            Cakes available for pick-up & delivery
-                        </p>
+                    <div class="test">
+                        <figure class="photo">
+                            <img class="photo__img" src="./images/cupcakes.jpg" alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
+                            <figcaption class="photo__caption photo__caption--ribboned">
+                                Delightful Handheld Joy
+                            </figcaption>
+                        </figure>
+                        
+                        <div class="flex direction-column align-center d-relative left-5">
+                            <p class="fs-medium">
+                                <a class="dotted-anchor" href="tel:1-555-4722">
+                                    +1 (555) 555-4722
+                                </a>
+                            </p>
+                            <p class="mt-1rem">
+                                Call us 9am-5pm
+                            </p>
+                            <p>
+                                Cakes available for pick-up & delivery
+                            </p>
+                        </div>
                     </div>
                 </div>
             </main>
             
             <footer>
-                <p>test</p>
+                <!-- Nothing yet... -->
             </footer>
         </div>
     </body>
