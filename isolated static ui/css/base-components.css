@@ -9,12 +9,13 @@
 /*========
 Icon-section Component
 ==========*/
+
 .icon-section {
     display: flex;
     flex-direction: center;
     gap: 0.75rem;
     
-    margin-top: 6.438rem; /* num from figma mockup */
+    margin-top: 6.438rem;
     
     .icon-section__icon {
         width: 2rem;
@@ -23,7 +24,7 @@ Icon-section Component
     
     .icon-section__icon--instagram {
         /* This will allow clicks to be ignored by the <embed> so that the anchor link works correctly. */
-        /* todo: understand why clicks are captured by <embed> but ignored by parent <a> */
+        /* learning todo: understand why clicks are captured by <embed>, but ignored by parent <a> */
         pointer-events: none;
     }
 }
