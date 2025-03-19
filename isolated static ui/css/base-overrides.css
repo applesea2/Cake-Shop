@@ -56,11 +56,11 @@ body {
     27 / .52rem;
     
     /* Mimick a border w/ `box-sizing: border-box` and shrink the content box */
-    /* have this be present only on pages that overflow */
+    /* Note: only have this be present on pages that overflow */
     /* padding: .52rem; */
     
     
-    /* Extend past the viewport height if needed due to flexible-layout overflow */
+    /* Extend past the viewport height if we need to due to flexible-layout overflow */
     min-height: 100%;
     height: auto;
 }
@@ -77,9 +77,9 @@ body {
     }
     
     main {
-        /* shrinks shrinkable content by default which is good for small
+        /* Shrinks shrinkable content by default which is good for small
         screen sizes */
-        /* expand content along main-axis to fill available free space within container */
+        /* Expand content along main-axis to fill available free space within container */
         flex-grow: 1;
     }
     
@@ -127,14 +127,15 @@ nav {
     
     padding: 4rem 6.5rem;
     
+    /* we could just use the background for Firefox to keep it consistent.
+       the Firefox hack messes with z-index though, whereas this is the ideal. */
     background: 
-        linear-gradient(180deg, var(--inner-background-color), 45%, transparent),
+        linear-gradient(180deg, var(--inner-background-color), 65%, transparent),
         linear-gradient(90deg, var(--inner-background-color), 15%, transparent),
         linear-gradient(270deg, var(--inner-background-color), 15%, transparent),
-        linear-gradient(0deg, var(--inner-background-color), 45%, transparent),
-        /* radial-gradient(circle at 20% center, var(--outer-background-color), 10%, transparent), */
+        linear-gradient(0deg, var(--inner-background-color), 65%, transparent),
+        radial-gradient(circle at 20% center, var(--outer-background-color), 10%, transparent),
         url(../images/header-pattern.png) center / 15rem 15rem;
-    
     
     & .navbar__item {
         & .navbar__link {
@@ -185,7 +186,7 @@ nav {
         filter: opacity(.5); /* Apply opacity to the whole element (gradient overlay + image) to mimick the effect */
         
         background: 
-            url(../images/gradient2.png) center / 100% 100% no-repeat,
+            url(../images/header-gradient-alternate.png) center / 100% 100% no-repeat,
             url(../images/header-pattern.png) center / 15rem 15rem;
     }
 }
@@ -218,7 +219,6 @@ a {
         color: #792b38;
     }
 }
-
 
 /* y does this not work */
 a[href^="tel:"] { 

@@ -94,6 +94,14 @@
     top: -5rem;
 }
 
+.right-6rem {
+    right: 6rem;
+}
+
+.top-8rem {
+    top: 8rem;
+}
+
 /* Animation effect */
 
 .animate {
