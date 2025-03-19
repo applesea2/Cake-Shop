@@ -4,7 +4,7 @@
 <svg viewBox="0 0 32 32" width="64" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <pattern id="gradientImage" width="100%" height="100%">
-          <image href="../images/instagram-gradient.png" width="100%" />
+          <image href="../images/instagram-icon-gradient.png" width="100%" />
         </pattern>
     </defs>
 
