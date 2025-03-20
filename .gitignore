@@ -4,6 +4,7 @@
 
 # Ignore Rider project settings
 .idea/
+.vs/
 *.iml
 
 # Ignore NuGet-related files
