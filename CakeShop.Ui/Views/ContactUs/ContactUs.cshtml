@@ -34,19 +34,23 @@
         <div class="col-md-4 mx-auto">
             <form method="post" accept-charset="UTF-8">
                 <div class="row mb-3">
-                    <label class="form-label" for="fname">First Name</label>
-                    <input class="form-control" type="text" id="fname" name="firstname">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" type="text" id="name" asp-for="Name">
                 </div>
                 <div class="row mb-3">
-                    <label class="form-label" for="lname">Last Name</label>
-                    <input class="form-control" type="text" id="lname" name="lastname">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" asp-for="Email"></input>
                 </div>
                 <div class="row mb-3">
-                    <label class="form-label" for="subject">Subject</label>
-                    <textarea class="form-control" id="subject" name="subject" style="height:200px"></textarea>
+                    <label class="form-label" for="phone">Phone</label>
+                    <input class="form-control" id="phone" asp-for="Phone"></input>             
                 </div>
                 <div class="row mb-3">
-                    <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
+                    <label class="form-label" for="comment">Comments/Questions</label>
+                    <textarea class="form-control" id="comment" asp-for="Comment" style="height:200px"></textarea>
+                </div>
+                <div class="row mb-3">
+                    <button class="btn btn-primary" type="submit" value="Submit" asp-action="OnSubmit">Submit</button>
                 </div>
             </form>
         </div>

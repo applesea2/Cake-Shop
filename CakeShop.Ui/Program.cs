@@ -19,6 +19,10 @@ builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 
 builder.Services.AddScoped<IMenuService, MenuService>();
 
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
+builder.Services.AddScoped<IContactUs, ContactUs>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
