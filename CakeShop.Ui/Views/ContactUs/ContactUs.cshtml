@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="~/css/ContactUs.css" asp-append-version="true"/>
 </head>
 <body>
+    @if (ViewData["EmailSent"] as bool? == true)
+    {
+        @await Component.InvokeAsync("EmailSent")
+    }
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -33,21 +37,25 @@
         </div>
         <div class="col-md-4 mx-auto">
             <form method="post" accept-charset="UTF-8">
-                <div class="row mb-3">
-                    <label class="form-label" for="name">Name</label>
-                    <input class="form-control" type="text" id="name" asp-for="Name">
+                <div class="row mb-3">                 
+                    <label class="form-label" asp-for="Name">Name</label>
+                    <input class="form-control" asp-for="Name" >
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <div class="row mb-3">                  
+                    <label class="form-label" asp-for="Email">Email</label>
+                    <input class="form-control" asp-for="Email">
+                    <span class="text-danger" asp-validation-for="Email"></span>
                 </div>
                 <div class="row mb-3">
-                    <label class="form-label" for="email">Email</label>
-                    <input class="form-control" id="email" asp-for="Email"></input>
+                    <label class="form-label" asp-for="Phone">Phone</label>
+                    <input class="form-control" asp-for="Phone">
+                    <span class="text-danger" asp-validation-for="Phone"></span>
                 </div>
                 <div class="row mb-3">
-                    <label class="form-label" for="phone">Phone</label>
-                    <input class="form-control" id="phone" asp-for="Phone"></input>             
-                </div>
-                <div class="row mb-3">
-                    <label class="form-label" for="comment">Comments/Questions</label>
-                    <textarea class="form-control" id="comment" asp-for="Comment" style="height:200px"></textarea>
+                    <label class="form-label" asp-for="Comment">Comments/Questions</label>
+                    <textarea class="form-control" asp-for="Comment" style="height:200px"></textarea>
+                    <span class="text-danger" asp-validation-for="Comment"></span>
                 </div>
                 <div class="row mb-3">
                     <button class="btn btn-primary" type="submit" value="Submit" asp-action="OnSubmit">Submit</button>

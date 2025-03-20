@@ -23,8 +23,7 @@ public class ContactUsController : Controller
         if (ModelState.IsValid)
         {
             await _contactUs.SendEmailAsync(model.Name, model.Email, model.Phone, model.Comment);
-            
-            return View("ContactUs", model);
+            ViewData["EmailSent"] = true;      
         }
         return View("ContactUs", model);
     }
