@@ -1,0 +1,40 @@
+body, i{
+    font-family: 'Georgia', serif;
+    background-color: #f8f1e4;
+    color: #5a3e36;
+    text-align: center;
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Brush Script MT', cursive;
+}
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+/* Apply Font Awesome font only to icons */
+.fa, .fas, .far, .fal, .fab {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important; /* Ensures proper icon rendering */
+}
+/* Target Font Awesome only for icon container */
+i.fa, i.fas, i.far, i.fal, i.fab {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Optional: Make sure the icons are not inheriting other properties that affect fonts */
+.fa, .fas, .far, .fal, .fab {
+    all: unset;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}

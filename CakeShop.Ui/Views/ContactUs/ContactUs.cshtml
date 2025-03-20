@@ -1,0 +1,59 @@
+﻿@model ContactUsModel
+
+@{
+    Layout = "_Layout";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Menu</title>
+    <link rel="stylesheet" href="~/css/ContactUs.css" asp-append-version="true"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Contact Us</h1>
+            <p>Thanks for stopping by! Drop us a message or give us a call, and we'll get back to you as soon as we can.</p>
+            <address>
+                <div class="mb-3">
+                    <span class="iconify" data-icon="mdi:home"></span>
+                    <label>2535 Kate St Holt, MI 48842</label>
+                </div>
+                <div class="mb-3">
+                    <span class="iconify" data-icon="mdi:phone"></span>
+                    <label>Phone: <a href="tel:+12486866636">(248) 686-6636</a></label>
+                </div>
+                <div class="mb-3">
+                    <span class="iconify" data-icon="mdi:envelope"></span>
+                    <label>Email: <a href="mailto:stroster.jesse@gmail.com">stroster.jesse@gmail.com</a></label>
+                </div>
+            </address>
+        </div>
+        <div class="col-md-4 mx-auto">
+            <form method="post" accept-charset="UTF-8">
+                <div class="row mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" type="text" id="name" asp-for="Name">
+                </div>
+                <div class="row mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" asp-for="Email"></input>
+                </div>
+                <div class="row mb-3">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input class="form-control" id="phone" asp-for="Phone"></input>             
+                </div>
+                <div class="row mb-3">
+                    <label class="form-label" for="comment">Comments/Questions</label>
+                    <textarea class="form-control" id="comment" asp-for="Comment" style="height:200px"></textarea>
+                </div>
+                <div class="row mb-3">
+                    <button class="btn btn-primary" type="submit" value="Submit" asp-action="OnSubmit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
