@@ -23,6 +23,13 @@ Hero Component
 Figure & Figcaption photo Component
 ==========*/
 
+/* wrap the photo component and make it go over the header a bit */
+.photo-wrapper {
+    position: absolute;
+    top: 8rem;
+    right: 6rem;
+}
+
 .photo {
     --photo-width: 314px;
     --photo-height: 422px;
@@ -42,7 +49,7 @@ Figure & Figcaption photo Component
         background-image: linear-gradient(to bottom, rgb(233, 63, 88, .38) 0%, rgb(185, 74, 90, .38) 50%, rgb(236, 116, 188, 0.38) 100%);
         padding: var(--img-border-size);
         
-        /* https://stackoverflow.com/a/40030380 */
+        /* Remove vertical space from inline <img>: https://stackoverflow.com/a/40030380 */
         vertical-align: top;
     }
     

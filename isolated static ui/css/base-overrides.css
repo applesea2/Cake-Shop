@@ -148,7 +148,7 @@ nav {
             text-decoration: none;
             
             &:hover {
-                color: #cb6a78;
+                color: #ab1229;
             }
         }
     }
@@ -220,10 +220,16 @@ a {
     }
 }
 
-/* y does this not work */
+/*========
+Telephone link
+==========*/
+
 a[href^="tel:"] { 
+    display: inline-block; /* to adjust width/height, we must change from inline display mode */
+    
+    transition: .3s scale;
     &:hover {
-        scale: 1.5 !important;
+        scale: 1.03;
     }
 }
 

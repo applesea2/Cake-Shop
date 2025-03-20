@@ -1,24 +1,25 @@
-/*
-Warning: this code is representative of some technical debt.
-Hide your children...
-*/
+/* Index page media queries, descending in screen width */
+
 @media screen and (max-width: 75.25em) {
     main {
         flex-direction: column;
     }
     
-    .test {
-        position:static;
-    }
-    
+
     body {
         /* padding to pretend we have content-box: border-box content box shrinkage
            with the border-image */
         /* add some to the bottom for some gap between the content and border-image */
         padding: .52rem .52rem calc(.52rem + 2rem) .52rem;
     }
-    /* todo: put the icons outside of the hero and at the bottom */
-    /* would be much much easier via CSS Grid!! :D */
+    
+    .photo-wrapper {
+        position: static;
+    }
+    /*
+    TODO: put the .icon-section outside of the .hero and underneath the photo-wrapper.
+    CSS Grid is required to achieve this sanely. :D this will be Epic..
+    */
 }
 
 @media screen and (max-width: 70em) {
@@ -37,6 +38,10 @@ Hide your children...
     
     h1 {
         font-size: 6rem;
+    }
+    
+    .hero {
+        height: 25rem;
     }
 }
 
@@ -57,7 +62,7 @@ Hide your children...
         font-size: 1.7rem;
     }
     
-    .svg-right-arrow::before {
-        content: none; /* hide arrow */
+    .hero .btn.svg-right-arrow::before {
+        content: none; /* hide right-pointing arrow */
     }
 }
