@@ -1,13 +1,50 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="d-flex align-items-end" style="height: 50vh;">
-    <p class="ms-4 mb-4 fs-3 fw-bold">Your text here</p>
-</div>
+<main class="flex align-center">
+    <div class="flex grow-1 direction-column justify-space-between align-center h-30rem">
+        <h1 class="w-40rem text-center lh-small">Cute Cakes Only For You</h1>
+        
+        <a class="btn btn--order-btn svg-right-arrow" href="#">
+            order now
+        </a>
+        
+        <div class="flex justify-center g-075">
+            <a target="_blank" href="https://www.facebook.com/">
+                <img class="icon" src="~/svg/facebook-icon.svg" alt="Instagram Logo">
+            </a>
+            <a target="_blank" href="https://www.instagram.com/">
+                <!-- we use an embed here, as an svg linked to an <img>
+                 cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
+                <embed class="icon icon--instagram" type="image/svg+xml" src="~/svg/instagram-icon.svg" aria-description="Instagram Logo">
+            </a>
+        </div>
+    </div>
+    
+    <div class="flex grow-1 direction-column align-center justify-center">
+        <figure class="photo">
+            <img class="photo__img" src="~/images/cupcakes.jpg" alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
+            <figcaption class="photo__caption photo__caption--ribboned">
+                Delightful Handheld Joy
+            </figcaption>
+        </figure>
+        
+        <div class="flex direction-column align-center d-relative left-5">
+            <p class="fs-medium">
+                <a class="dotted-anchor" href="tel:1-555-4722">
+                    +1 (555) 555-4722
+                </a>
+            </p>
+            <p class="mt-1rem">
+                Call us 9am-5pm
+            </p>
+            <p>
+                Cakes available for pick-up & delivery
+            </p>
+        </div>
+    </div>
+</main>
 
-@*<div class="text-lg-start">
-    <p class="text-left fs-1 fw-bold fw-bold mx-auto" style="color: lightcoral">Cute cakes only for you</p>
-</div>*@
-<div>
-    <img src="cake.jpg" class="img-fluid rounded d-block float-end" style="max-width: 35%;" alt="Delicious Cake">
-</div>
+<footer>
+    <p>test</p>
+</footer>

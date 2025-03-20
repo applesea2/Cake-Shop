@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# Ignore build and obj folders
 **/bin/
 **/obj/
@@ -8,3 +9,10 @@
 
 # Ignore NuGet-related files
 *.nuget.*
+=======
+﻿/CakeShop/wwwroot/cake.xcf
+**/obj/
+**/bin/
+/.vs/
+/.idea/
+>>>>>>> homepage-html
