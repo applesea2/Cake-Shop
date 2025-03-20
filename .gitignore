@@ -1,0 +1,10 @@
+﻿# Ignore build and obj folders
+**/bin/
+**/obj/
+
+# Ignore Rider project settings
+.idea/
+*.iml
+
+# Ignore NuGet-related files
+*.nuget.*
