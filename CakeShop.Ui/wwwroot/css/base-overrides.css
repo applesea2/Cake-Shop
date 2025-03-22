@@ -1,0 +1,163 @@
+/*========
+CSS Reset
+==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+We need html to be 100%, otherwise its
+default length values of auto will cause an infinite loop with its body child,
+as auto tries to take on the width/height of its child, while the body tries to take up
+100% width/height of its parent.
+*/
+html, body {
+    width: 100%;
+    height: 100%;
+    
+    font-family: "Arima";
+}
+
+/* onion skin */
+/* body::after {
+    content: "";
+    background-image: url(../images/mockup.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 100vh;
+    opacity: .3;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/*========
+Flexible layout - sticky footer pattern:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#alternate_method
+==========*/
+
+.flexible-layout {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    
+    header {
+        flex-shrink: 0;
+    }
+    
+    main {
+        /* shrinks shrinkable content by default which is good for small
+        screen sizes */
+        /* expand content along main-axis to fill available free space within container */
+        flex-grow: 1;
+    }
+    
+    footer {
+        flex-shrink: 0;
+    }
+}
+
+/*========
+Pink outline gradient around the content
+
+Outer-background applies to the body
+Inner-background applies to the flexible-layout div
+==========*/
+
+.outer-background {
+    background: rgb(253,136,153);
+    background: linear-gradient(90deg, rgba(253,136,153,1) 0%, rgba(252,164,176,1) 100%); 
+    padding: .52rem;
+}
+
+.inner-background {
+    /* default bg-color is transparent, so set it to be whitish */
+    background-color: #FFF3F3;
+}
+
+/*========
+Header navbar
+==========*/
+
+.navbar {
+    
+    width: 100%;
+    list-style-type: none;
+    
+    display: flex;
+    gap: 6rem;
+    margin-left: 6.5rem;
+    
+    & .navbar__item {
+        
+        & .navbar__link {
+            color: #FD8899;
+            font-size: 1.6rem;
+            font-family: "Arima";
+   
+            font-weight: 600;
+            
+            text-decoration: none;
+            
+            &:hover {
+                color: #cb6a78;
+            }
+        }
+    }
+}
+
+/*========
+User agent overrides
+==========*/
+
+*::selection {
+    background-color: #f7a5b045;    
+}
+
+h1 {
+    color: #FD8899;
+    font-size: 6rem;
+}
+
+p {
+    font-family: "Quicksand";
+    color: #FD8899;
+    font-weight: bold;
+}
+
+a {
+    color: #CE6372;
+    
+    transition: .4s color;
+    &:hover {
+        color: #792b38;
+    }
+}
+
+
+/* y does this not work */
+a[href^="tel:"] { 
+    &:hover {
+        scale: 1.5 !important;
+    }
+}
+
+/* Phone icon before telephone links */
+a[href^="tel:"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    /* achieve an svg color fill via mask */
+    background-color: rgb(94, 71, 70);
+    mask: url("../svg/phone.svg") no-repeat center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}

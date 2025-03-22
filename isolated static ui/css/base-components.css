@@ -1,0 +1,120 @@
+/*========
+Navbar components. Includes:
+    .navbar,
+    .navbar__item,
+    .navbar__link
+==========*/
+
+.navbar {
+    list-style-type: none;
+    
+    display: flex;
+    gap: 6rem;
+    height: 100%;
+    width: 100%;
+    
+    padding: 4rem 6.5rem;
+    
+    /* we could just use the background for Firefox to keep it consistent.
+       the Firefox hack messes with z-index though, whereas this is the ideal. */
+    background: 
+        linear-gradient(180deg, var(--inner-background-color), 65%, transparent),
+        linear-gradient(90deg, var(--inner-background-color), 15%, transparent),
+        linear-gradient(270deg, var(--inner-background-color), 15%, transparent),
+        linear-gradient(0deg, var(--inner-background-color), 65%, transparent),
+        radial-gradient(circle at 20% center, var(--outer-background-color), 10%, transparent),
+        url(../images/header-pattern.png) center / 15rem 15rem;
+    
+    & .navbar__item {
+        & .navbar__link {
+            color: #e35369;
+            font-size: 1.6rem;
+            font-family: "Arima";
+   
+            font-weight: 600;
+            
+            text-decoration: none;
+            
+            &:hover {
+                color: #ab1229;
+            }
+        }
+    }
+}
+
+/*========
+Firefox navbar rendering bug work-around:
+========*/
+
+/* Warning: this may become deprecated in the future.
+   https://developer.mozilla.org/en-US/docs/Web/CSS/@document#browser_compatibility */
+@-moz-document url-prefix() {
+    /*
+    Note: Header and descendants are completely outside of the document flow
+      in order to work around a Firefox gradient render issue.
+    */
+    header {
+        width: 100%;
+        position: relative;
+    }
+    
+    .navbar {
+        /* Remove the broken gradient background + background image */
+        background: none;
+        
+        > .navbar__item {
+            z-index: 1; /* allow for pointer events. Why do pointer events not work without z-index? it looks fine visually */
+        }
+    }
+    /* Header background image with gradient overlay for linear gradient opacity effect */
+    .navbar::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        filter: opacity(.5); /* Apply opacity to the whole element (gradient overlay + image) to mimick the effect */
+        
+        background: 
+            url(../images/header-gradient-alternate.png) center / 100% 100% no-repeat,
+            url(../images/header-pattern.png) center / 15rem 15rem;
+    }
+}
+
+/*========
+Base button Component
+==========*/
+
+.btn {
+    border: none;
+    background: none;
+    /* inherit from body (or from parent if it overrides its inherited font-family) */
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/*========
+Icon-section Component
+==========*/
+
+.icon-section {
+    display: flex;
+    flex-direction: center;
+    gap: 0.75rem;
+    
+    margin-top: 6.438rem;
+    
+    .icon-section__icon {
+        width: 2rem;
+        aspect-ratio: 1/1;
+    }
+    
+    .icon-section__icon--instagram {
+        /* This will allow clicks to be ignored by the <embed> so that the anchor link works correctly. */
+        /* learning todo: understand why clicks are captured by <embed>, but ignored by parent <a> */
+        pointer-events: none;
+    }
+}
+

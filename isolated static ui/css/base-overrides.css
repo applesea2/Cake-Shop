@@ -1,0 +1,172 @@
+/*========
+CSS Reset
+==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*========
+Repeated global variables
+==========*/
+:root {
+    --inner-background-color: #FFF3F3;
+    --outer-background-color: rgb(253,136,153);
+}
+
+/*
+We need html to be 100%, otherwise its
+default length values of auto will cause an infinite loop with its body child,
+as auto tries to take on the width/height of its child, while the body tries to take up
+100% width/height of its parent.
+*/
+html, body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    
+    font-family: "Arima";
+}
+
+/* onion skin */
+/* body::after {
+    content: "";
+    background-image: url(../images/mockup.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 100vh;
+    opacity: .3;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/*========
+Flexible layout - sticky footer pattern:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#alternate_method
+==========*/
+
+body {
+    background-color: var(--inner-background-color);
+    
+    border-image: linear-gradient(90deg, var(--outer-background-color) 0%, rgba(252,164,176) 100%)
+    27 / .52rem;
+    
+    /* Mimick a border w/ `box-sizing: border-box` and shrink the content box */
+    /* Note: only have this be present on pages that overflow */
+    /* padding: .52rem; */
+    
+    
+    /* Extend past the viewport height if we need to due to flexible-layout overflow */
+    min-height: 100%;
+    height: auto;
+}
+
+.flexible-layout {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    
+    header {
+        flex-shrink: 0;
+    }
+    
+    main {
+        /* Shrinks shrinkable content by default which is good for small
+        screen sizes */
+        /* Expand content along main-axis to fill available free space within container */
+        flex-grow: 1;
+    }
+    
+    footer {
+        flex-shrink: 0;
+    }
+}
+
+/*========
+Pink outline gradient around the content
+
+Outer-background applies to the body
+Inner-background applies to the flexible-layout div
+==========*/
+
+/* .outer-background {
+    background: linear-gradient(90deg, var(--outer-background-color) 0%, rgba(252,164,176) 100%); 
+    padding: .52rem;
+}
+
+.inner-background {
+    default bg-color is transparent, so set it to be whitish 
+    background-color: var(--inner-background-color); 
+}
+*/
+
+/*========
+Header navbar (includes .navbar and .
+==========*/
+header {
+    width: 100%;
+}
+
+nav {
+    height: 100%;
+}
+
+/*========
+User agent overrides
+==========*/
+
+*::selection {
+    background-color: #f7a5b045;    
+}
+
+h1 {
+    color: #FD8899;
+    font-size: 6rem;
+}
+
+p {
+    font-family: "Quicksand";
+    color: #FD8899;
+    font-weight: bold;
+}
+
+a {
+    color: #CE6372;
+    
+    transition: .4s color;
+    &:hover {
+        color: #792b38;
+    }
+}
+
+/*========
+Telephone link
+==========*/
+
+a[href^="tel:"] { 
+    display: inline-block; /* to adjust width/height, we must change from inline display mode */
+    
+    transition: .3s scale;
+    &:hover {
+        scale: 1.03;
+    }
+}
+
+/* Phone icon before telephone links */
+a[href^="tel:"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    /* achieve an svg color fill via mask */
+    background-color: rgb(94, 71, 70);
+    mask: url("../svg/phone.svg") no-repeat center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}

@@ -1,0 +1,18 @@
+.btn {
+    border: none;
+    background: none;
+    /* inherit from body (or from parent if it overrides its inherited font-family) */
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.icon {
+    width: 2rem;
+    aspect-ratio: 1/1;
+}
+
+.icon--instagram {
+    /* This will allow clicks to be ignored by the <embed> so that the anchor link works correctly. */
+    /* todo: understand why clicks are captured by <embed> but ignored by parent <a> */
+    pointer-events: none;
+}

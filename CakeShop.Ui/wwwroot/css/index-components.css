@@ -1,0 +1,169 @@
+/*========
+Hero Component
+==========*/
+.hero {
+    .hero__showcase {
+        .hero__ {
+            
+        }
+    }
+}
+
+/*========
+Figure & Figcaption photo Component
+==========*/
+.photo {
+    --photo-width: 314px;
+    --photo-height: 422px;
+    --ribbon-sides-width: .7rem;
+    --caption-tb-padding: 1.1rem;
+    --caption-font-size: 24px;
+    /* take on height of caption content (font-size) & caption height padding, then take off some EM */
+    --ribbon-sides-height: calc(var(--caption-font-size) + (var(--caption-tb-padding) * 2) - .6em);
+    --img-border-size: .2rem;
+
+    
+    .photo__img {
+        width: var(--photo-width);
+        height: var(--photo-height);
+        object-fit: cover;
+        
+        /* Achieve a linear gradient border via a background & padding space */
+        background-image: linear-gradient(to bottom, rgb(233, 63, 88, .38) 0%, rgb(185, 74, 90, .38) 50%, rgb(236, 116, 188, 0.38) 100%);
+        padding: var(--img-border-size);
+        
+        /* https://stackoverflow.com/a/40030380 */
+        vertical-align: top;
+    }
+    
+    .photo__caption {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5rem;
+    }
+    
+    .photo__caption--ribboned {
+        color: #FFF0F0;
+        background-color: #FD6565;
+        
+        width: var(--photo-width);
+        font-size: 24px;
+        padding: var(--caption-tb-padding) 0;
+        
+        font-weight: bold;
+        text-align: center;
+        
+        position: relative;
+        
+        /* Cover the bottom image border */
+        top: calc(var(--img-border-size) * -1);
+        
+        /* Ribbons */
+        &::before {
+            content: "";
+            background-color: #E85C5C;
+            width: var(--ribbon-sides-width);
+            height: var(--ribbon-sides-height);
+            
+            display: block;
+            position: absolute;
+            left: calc(var(--ribbon-sides-width) * -1);
+            bottom: 0;
+        }
+        
+        &::after {
+            content: "";
+            background-color: #E85C5C;
+            width: var(--ribbon-sides-width);
+            height: var(--ribbon-sides-height);
+            
+            display: block;
+            position: absolute;
+            
+            left: calc(var(--photo-width));
+            bottom: 0;
+        }
+        
+        /* better contrast within the pink selection theme of the base.css selection css */
+        &::selection {
+            background-color: #94364345;    
+        }
+    }
+}
+
+
+/*========
+Order button
+==========*/
+
+.btn--order-btn {
+    text-decoration: none;    
+    color: #FF7C8F;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 3px solid #FD8899;
+    padding: .45rem 4rem;
+    position: relative;
+    
+    /* &::after {
+        content: "";
+        
+        /* why do EM units mess up the vertical alignment?
+        also small dimensions mess up the svg.. 
+        width: 1.8rem;
+        aspect-ratio: 1/1;
+
+        background-color: #97345c;
+        mask: url("../svg/launch-link-open.svg") no-repeat center;
+        mask-size: 1.4rem;
+        
+        display: inline-block;
+        /* position absolute relative to --order-btn 
+        position: absolute;
+        
+        transition: .2s ease-out transform;
+    }
+    &:hover::after {
+        transform: translate3d(3px, -2px, 0);
+    } */
+    
+    transition: .5s box-shadow, .3s scale, .3s border-radius;
+    &:hover {
+        box-shadow: 0 2px 3px rgba(205, 28, 28, 0.279);
+        scale: 1.03;
+        /* override base <a> hover color */
+        color: #FF7C8F;
+    }
+    &:active {
+        scale: 1;
+        box-shadow: 0 1px 3px rgba(146, 205, 28, 0.11);
+    }
+}
+
+/*========
+SVG Arrow to the left of order button
+==========*/
+
+.svg-right-arrow {
+    position: relative;
+}
+
+.svg-right-arrow::before {
+    content: "";
+    display: block;
+    
+    width: 6.2rem;
+    height: 4rem;
+    background: url("../svg/arrow.svg");
+    
+    /* position absolute (out of doc flow) relative to element with class svg-right-arrow  */
+    position: absolute;
+    left: -7rem;
+    top: -1.5rem;
+    
+    /* it inherits the scale of the element it's applied on.
+    to prevent this, we could instead use an image element.
+    but it looks cool so i'll keep it this way */
+}

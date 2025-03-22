@@ -9,3 +9,14 @@
 
 # Ignore NuGet-related files
 .nuget/
+=======
+*.iml
+
+# Ignore NuGet-related files
+*.nuget.*
+=======
+/CakeShop/wwwroot/cake.xcf
+**/obj/
+**/bin/
+/.vs/
+/.idea/

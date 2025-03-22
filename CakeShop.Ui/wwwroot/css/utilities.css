@@ -1,0 +1,88 @@
+.hidden {
+    display: none;
+}
+
+/* Debug utilities */
+.ol-on {
+    outline: 1px solid red;
+}
+
+/* Typography utilities */
+.text-center {
+    text-align: center;
+}
+
+.lh-small {
+    line-height: 1.035;
+}
+
+.fs-medium {
+    font-size: 24px;
+}
+
+.dotted-anchor {
+    /* text-decoration-style: dotted;
+    text-decoration-thickness: 12.5%;
+    text-underline-offset: 15.5%; */
+    text-decoration: none;
+    border-bottom: 3px dotted;
+    
+}
+
+/* Sizing utilities */
+.w-40rem {
+    width: 40rem;
+}
+
+.h-30rem {
+    height: 30rem;
+}
+
+
+/* Spacing utilities */
+
+.mt-1rem {
+    margin-top: 1rem;
+}
+
+.mt-1em {
+    margin-top: 1em;
+}
+
+.mt-4rem {
+    margin-top: 4rem;
+}
+
+/* Flex utilities */
+
+.flex {
+    display: flex;
+}
+
+.grow-1 {
+    flex-grow: 1;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.g-075 {
+    gap: 0.75rem;
+}
