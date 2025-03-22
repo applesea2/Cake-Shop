@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeShop.Ui", "CakeShop.Ui\CakeShop.Ui.csproj", "{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89FB930E-8C7D-4535-837D-18F8E625D204} = {89FB930E-8C7D-4535-837D-18F8E625D204}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeShop.DAL", "CakeShop.Persistance\CakeShop.DAL.csproj", "{D9BB3668-740A-499E-85BC-52DDEAA6DD09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeShop.Service", "CakeShop.Service\CakeShop.Service.csproj", "{89FB930E-8C7D-4535-837D-18F8E625D204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cakeshop.DTO", "Cakeshop.DTO\Cakeshop.DTO.csproj", "{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9BB3668-740A-499E-85BC-52DDEAA6DD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BB3668-740A-499E-85BC-52DDEAA6DD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BB3668-740A-499E-85BC-52DDEAA6DD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BB3668-740A-499E-85BC-52DDEAA6DD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FB930E-8C7D-4535-837D-18F8E625D204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FB930E-8C7D-4535-837D-18F8E625D204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FB930E-8C7D-4535-837D-18F8E625D204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FB930E-8C7D-4535-837D-18F8E625D204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

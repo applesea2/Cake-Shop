@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- todo: research favicons, implement responsive dpi versions -->
+        <!-- todo: improve icon design -->
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="./css/base-overrides.css">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <link rel="stylesheet" type="text/css" href="./css/utilities.css">
+        <!-- Load index components after index, as some index components
+         override base rules via BEM modifiers (i.e CSS cascade is in effect). -->
+        <link rel="stylesheet" type="text/css" href="./css/base-components.css">
+        <link rel="stylesheet" type="text/css" href="./css/index-components.css">
+        
+        <!-- Ugly Bugly but for the vine (job interview) -->
+        <link rel="stylesheet" type="text/css" href="./css/index-responsiveness.css">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        
+        <!-- Open Graph Protocol for rich Social Media embeds -->
+        <meta property="og:title" content="Jesse's Homemade Cakes" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="self_url" /> <!-- replace content ! -->
+        
+        <meta property="og:image" content="absolute_path" /> <!-- replace content ! -->
+        <meta property="og:image:type" content="image/jpeg" /> <!-- replace content ! -->
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:image:alt" content="A shiny red apple with a bite taken out" />
+        
+        <title>Jesse's Homemade Cakes</title>
+    </head>
+    <body>
+        <div class="flexible-layout">
+            <header>
+                <nav>
+                    <ul class="navbar">
+                        <!--  todo: hire an artist to make a company logo -->
+                        <li class="navbar__item hidden">
+                            <p>
+                                <img class="logo" src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
+                            </p>
+                        </li>
+                        <li class="navbar__item">
+                            <p>
+                                <a class="navbar__link" href="#">Home</a>
+                            </p>
+                        </li>
+                        <li class="navbar__item">
+                            <p>
+                                <a class="navbar__link" href="#">Menu</a>
+                            </p>
+                        </li>
+                        <li class="navbar__item">
+                            <p>
+                                <a class="navbar__link" href="#">Order</a>
+                            </p>
+                        </li>
+                        <li class="navbar__item"> 
+                            <p>
+                                <a class="navbar__link" href="#">About</a>
+                            </p>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main class="flex align-center">
+                <div class="hero grow-1">
+                    <h1 class="hero__heading1">Cute Cakes Only For You</h1>
+                    
+                    <a class="btn btn--order-btn svg-right-arrow" href="#">
+                        order now
+                    </a>
+                    
+                    <div class="icon-section">
+                        <a class="animate" target="_blank" href="https://www.facebook.com/">
+                            <img class="icon-section__icon" src="./svg/facebook-icon.svg" alt="Instagram Logo">
+                        </a>
+                        <a class="animate" target="_blank" href="https://www.instagram.com/">
+                            <!-- we use an embed here, as an svg linked to an <img>
+                             cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
+                            <embed class="icon-section__icon icon-section__icon--instagram" type="image/svg+xml" src="./svg/instagram-icon.svg" aria-description="Instagram Logo">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grow-1">
+                    <div class="photo-wrapper">
+                        <figure class="photo">
+                            <img class="photo__img" src="./images/cupcakes-stock-photo.jpg" alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
+                            <figcaption class="photo__caption photo__caption--ribboned">
+                                Delightful Handheld Joy
+                            </figcaption>
+                        </figure>
+                        
+                        <div class="flex direction-column align-center">
+                            <p class="fs-medium">
+                                <a class="dotted-anchor" href="tel:1-555-4722">
+                                    +1 (555) 555-4722
+                                </a>
+                            </p>
+                            <p class="mt-1rem">
+                                Call us 9am-5pm
+                            </p>
+                            <p>
+                                Cakes available for pick-up & delivery
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer>
+                <!-- Nothing yet... -->
+            </footer>
+        </div>
+    </body>
+</html>
