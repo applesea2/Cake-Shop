@@ -1,18 +1,22 @@
-<<<<<<< HEAD
-﻿# Ignore build and obj folders
+# Ignore build and obj folders
 **/bin/
 **/obj/
 
 # Ignore Rider project settings
 .idea/
+.vs/
+*.iml
+
+# Ignore NuGet-related files
+.nuget/
+=======
 *.iml
 
 # Ignore NuGet-related files
 *.nuget.*
 =======
-﻿/CakeShop/wwwroot/cake.xcf
+/CakeShop/wwwroot/cake.xcf
 **/obj/
 **/bin/
 /.vs/
 /.idea/
->>>>>>> homepage-html
