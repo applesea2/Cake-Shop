@@ -1,19 +1,14 @@
 ﻿@model AboutUsModel
 
 @{
-    Layout = "_layout";
+    Layout = "_Layout";
+    ViewData["Title"] = "About Us";
 }
 
-<!DOCTYPE html>
+@section Stylesheets {
+    <link rel="stylesheet" type="text/css" href="~/css/aboutUs.css" asp-append-version="true">
+}
 
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Menu</title>
-    <link rel="stylesheet" href="~/css/aboutUs.css" asp-append-version="true"/>
-</head>
-<body>
 <div class="container">
     <h1>Jesse's Homemade Cakes</h1>
     <p>At Jesse's Homemade Cakes, we are passionate about crafting exceptional cakes that bring joy to every occasion.
@@ -27,5 +22,3 @@
         Come taste the difference and experience the perfect cake, made with love.</p>
     <img src="~/assets/cake.jpg" alt="Cake" width="50%" height="50%" asp-append-version="true"/>
 </div>
-</body>
-</html>

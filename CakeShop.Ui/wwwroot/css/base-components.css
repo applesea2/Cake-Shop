@@ -23,7 +23,7 @@ Navbar components. Includes:
         linear-gradient(270deg, var(--inner-background-color), 15%, transparent),
         linear-gradient(0deg, var(--inner-background-color), 65%, transparent),
         radial-gradient(circle at 20% center, var(--outer-background-color), 10%, transparent),
-        url(../images/header-pattern.png) center / 15rem 15rem;
+        url(~/assets/images/header-pattern.png) center / 15rem 15rem;
     
     & .navbar__item {
         & .navbar__link {
@@ -78,8 +78,8 @@ Firefox navbar rendering bug work-around:
         filter: opacity(.5); /* Apply opacity to the whole element (gradient overlay + image) to mimick the effect */
         
         background: 
-            url(../images/header-gradient-alternate.png) center / 100% 100% no-repeat,
-            url(../images/header-pattern.png) center / 15rem 15rem;
+            url(~/assets/images/header-gradient-alternate.png) center / 100% 100% no-repeat,
+            url(~/assets/images/header-pattern.png) center / 15rem 15rem;
     }
 }
 

@@ -1,35 +1,44 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
-<main class="flex align-center">
-    <div class="flex grow-1 direction-column justify-space-between align-center h-30rem">
-        <h1 class="w-40rem text-center lh-small">Cute Cakes Only For You</h1>
-        
-        <a class="btn btn--order-btn svg-right-arrow" href="#">
-            order now
-        </a>
-        
-        <div class="flex justify-center g-075">
-            <a target="_blank" href="https://www.facebook.com/">
-                <img class="icon" src="~/svg/facebook-icon.svg" alt="Instagram Logo">
-            </a>
-            <a target="_blank" href="https://www.instagram.com/">
-                <!-- we use an embed here, as an svg linked to an <img>
-                 cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
-                <embed class="icon icon--instagram" type="image/svg+xml" src="~/svg/instagram-icon.svg" aria-description="Instagram Logo">
-            </a>
-        </div>
-    </div>
+
+@section Stylesheets {
+    <link rel="stylesheet" type="text/css" href="~/css/index-components.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/css/index-responsiveness.css" asp-append-version="true">
+}
+
+<div class="hero grow-1">
+    <h1 class="hero__heading1">Cute Cakes Only For You</h1>
     
-    <div class="flex grow-1 direction-column align-center justify-center">
+    <a class="btn btn--order-btn svg-right-arrow" href="#">
+        order now
+    </a>
+    
+    <div class="icon-section">
+        <a class="animate" target="_blank" href="https://www.facebook.com/">
+            <img class="icon-section__icon" src="~/assets/svg/facebook-icon.svg" alt="Instagram Logo">
+        </a>
+        <a class="animate" target="_blank" href="https://www.instagram.com/">
+            <!-- we use an embed here, as an svg linked to an <img>
+             cannot reference 3rd party resources https://stackoverflow.com/a/41195767 -->
+            <embed class="icon-section__icon icon-section__icon--instagram" type="image/svg+xml" src="~/assets/svg/instagram-icon.svg" aria-description="Instagram Logo">
+        </a>
+    </div>
+</div>
+
+<div class="grow-1">
+    <div class="photo-wrapper">
         <figure class="photo">
-            <img class="photo__img" src="~/images/cupcakes.jpg" alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
+            <img class="photo__img"
+                 src="~/assets/images/cupcakes-stock-photo.jpg"
+                 asp-append-version="true"
+                 alt="Light blue frosted vanilla cupakes each with a ring of tiny rainbow springles on a pink background.">
             <figcaption class="photo__caption photo__caption--ribboned">
                 Delightful Handheld Joy
             </figcaption>
         </figure>
         
-        <div class="flex direction-column align-center d-relative left-5">
+        <div class="flex direction-column align-center">
             <p class="fs-medium">
                 <a class="dotted-anchor" href="tel:1-555-4722">
                     +1 (555) 555-4722
@@ -43,8 +52,4 @@
             </p>
         </div>
     </div>
-</main>
-
-<footer>
-    <p>test</p>
-</footer>
+</div>

@@ -165,7 +165,7 @@ a[href^="tel:"]::before {
     height: 1em;
     /* achieve an svg color fill via mask */
     background-color: rgb(94, 71, 70);
-    mask: url("../svg/phone.svg") no-repeat center;
+    mask: url("~/assets/svg/phone.svg") no-repeat center;
     display: inline-block;
     vertical-align: middle;
     position: relative;

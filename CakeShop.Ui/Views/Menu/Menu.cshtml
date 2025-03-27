@@ -2,19 +2,16 @@
 
 @{
     Layout = "_Layout";
+    ViewData["Title"] = "Menu";
 }
 
-<!DOCTYPE html>
-
-<html lang="en-us">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Menu</title>
+@section Stylesheets {
     <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true"/>
-</head>
-<body>
+}
+
+
 <h1>Menu</h1>
+
 <div class="menu-container">
     <table class="menu-table">
         <thead>
@@ -72,5 +69,3 @@
         </tr>*@
     </table>
 </div>
-</body>
-</html>
