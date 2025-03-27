@@ -71,21 +71,21 @@
                         <!--  todo: hire an artist to make a company logo -->
                         <li class="navbar__item hidden">
                             <p>
-                                <a asp-controller="HomeController" asp-action="Index" class="navbar__link">
+                                <a asp-controller="Home" asp-action="Index" class="navbar__link">
                                     <img class="logo" src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
                                 </a>
                             </p>
                         </li>
                         <li class="navbar__item">
                             <p>
-                                <a  class="navbar__link" asp-controller="HomeController" asp-action="Index">
+                                <a  class="navbar__link" asp-controller="Home" asp-action="Index">
                                     Home
                                 </a>
                             </p>
                         </li>
                         <li class="navbar__item">
                             <p>
-                                <a  class="navbar__link" asp-controller="HomeController" asp-action="Menu">
+                                <a  class="navbar__link" asp-controller="Menu" asp-action="Menu">
                                     Menu
                                 </a>
                             </p>
@@ -93,14 +93,14 @@
                         <li class="navbar__item">
                             <p>
                                 <!-- Todo: create controller for order -->
-                                <a class="navbar__link" asp-controller="HomeController" asp-action="Index" >
-                                    Order
+                                <a class="navbar__link" asp-controller="ContactUs" asp-action="ContactUs" >
+                                    Contact Us
                                 </a>
                             </p>
                         </li>
                         <li class="navbar__item"> 
                             <p>
-                                <a class="navbar__link" asp-controller="AboutUsController" asp-action="AboutUs">
+                                <a class="navbar__link" asp-controller="AboutUs" asp-action="AboutUs">
                                     About
                                 </a>
                             </p>
@@ -122,9 +122,6 @@
 				-->
             </footer>
         </div>
-<<<<<<< HEAD
-    </nav>
-</header>*@
 <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
@@ -137,11 +134,4 @@
 <partial name="_ValidationScriptsPartial" />
 @await RenderSectionAsync("Scripts", required: false)
 </body>
-=======
-        
-        
-        <!-- Only add scripts if we need them -->
-        @await RenderSectionAsync("Scripts", required: false)
-    </body>
->>>>>>> cb7f9a2 (Convert pages to Razor files)
 </html>
