@@ -10,6 +10,7 @@
       <_ContentIncludedByDefault Remove="Pages\AboutUs\About.cshtml" />
       <_ContentIncludedByDefault Remove="Pages\ContactUs\ContactUs.cshtml" />
       <_ContentIncludedByDefault Remove="Pages\Menu\Menu.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Base\Base.cshtml" />
     </ItemGroup>
 
     <ItemGroup>

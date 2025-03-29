@@ -1,23 +1,30 @@
-﻿@using Microsoft.AspNetCore.Http
+﻿@{
+    ViewData["url"] = Context.Request.Path;
+    // Fallback title
+    ViewData["Title"] = "default title";
+    
+    ViewData["ogImagePath"] = "~/assets/images/cupcakes-stock-photo.jpg";
+    ViewData["ogMimeType"] = "image/jpg";
+    ViewData["ogImageAltText"] = "A cake";
+}
 
-@{
-    string url = Context.Request.Path;
-    
-    string shopName = "Jesse's Homemade Cakes";
-    string? titleData = (string?)ViewData["Title"];
-    string pageTitle;
-    if (!String.IsNullOrWhiteSpace(titleData)) {
-        pageTitle = $"{titleData} - {shopName}";
+@* Define an optional ViewData title to replace the one above. *@
+@* Used for the page <title> *@
+@RenderSection("TitleData", required: false);
+
+@* Define optional ViewData to replace Open Graph Protocol values above. *@
+@* Used for the meta OG tags *@
+@RenderSection("openGraphData", required: false);
+
+@functions {
+    public string GenerateTitle(string pageTitle) {
+        string shopName = "Jesse's Homemade Cakes";
+        if (!String.IsNullOrWhiteSpace(pageTitle)) {
+            return $"{pageTitle} - {shopName}";
+        }
+        
+        return shopName;
     }
-    else {
-        pageTitle = shopName;
-    }
-    
-    // OpenGraph Protocol values
-    // Todo: Fill these in based on the primary image of a page.
-    string ogImagePath = "";
-    string ogMimeType = "";
-    string ogImageAltText = "";
 }
 
 <!DOCTYPE html>
@@ -35,10 +42,10 @@
         <link rel="stylesheet" type="text/css" href="~/css/utilities.css" asp-append-version="true">
         <link rel="stylesheet" type="text/css" href="~/css/base-components.css" asp-append-version="true">
         <!-- Load page-specific components after base, as some index components
-         override base rules. -->
+        override base rules. -->
+        
         <!-- Page-specific stylesheets -->
         @RenderSection("Stylesheets", required: false)
-        
         
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,17 +58,19 @@
         
         
         <!-- Open Graph Protocol for rich Social Media embeds -->
-        <meta property="og:title" content="@pageTitle" />
+        <meta property="og:title" content="@GenerateTitle((string)ViewData["Title"])" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="@url" />
+        <meta property="og:url" content="@ViewData["url"]" />
         
-        <meta property="og:image" content="@ogImagePath" />
-        <meta property="og:image:type" content="@ogMimeType" />
+        <meta property="og:image" content="@ViewData["ogImagePath"]" />
+        <meta property="og:image:type" content="@ViewData["ogMimeType"]" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400" />
-        <meta property="og:image:alt" content="@ogImageAltText" />
+        <meta property="og:image:alt" content="@ViewData["ogImageAltText"]" />
         
-        <title>@pageTitle</title>
+        <title>
+            @GenerateTitle((string)ViewData["Title"])
+        </title>
     </head>
     <body>
         <div class="flexible-layout">
@@ -114,24 +123,22 @@
             </main>
             
             <footer>
-				<!--
-				To be present in the final pages. Need to work out the CSS for it
-				<p>
-                	Made by Jesse & Zowie
-            	</p>
-				-->
+                <p>
+                    Made by
+                    <a target="_blank" href="https://github.com/applesea2">Jesse</a>
+                    &
+                    <a target="_blank" href="https://1zzowiebeha.github.io/">Zowie</a>
+                </p>
             </footer>
         </div>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-<partial name="_ValidationScriptsPartial" />
-@await RenderSectionAsync("Scripts", required: false)
-</body>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <partial name="_ValidationScriptsPartial" />
+    
+        <!-- Only add scripts if we need them for a page. -->
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
 </html>

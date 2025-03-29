@@ -4,17 +4,25 @@
     Layout = "_Layout";
 }
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Menu</title>
-    <link rel="stylesheet" href="~/css/ContactUs.css" asp-append-version="true"/>
-</head>
-<body>
-    @if (ViewData["EmailSent"] as bool? == true)
-    {
-        @await Component.InvokeAsync("EmailSent")
+@section TitleData {
+    @{
+        ViewData["Title"] = "Contact Us";
     }
+}
+
+@section Stylesheets {
+    <link rel="stylesheet" href="~/css/bootstrapped/contactUs.css" asp-append-version="true"/>
+}
+
+@* Page code: *@
+
+@if (ViewData["EmailSent"] as bool? == true)
+{
+    @await Component.InvokeAsync("EmailSent")
+}
+
+@* Body: *@
+    
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -64,4 +72,3 @@
         </div>
     </div>
 </div>
-</body>

@@ -1,11 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+@section TitleData {
+    @{
+        ViewData["Title"] = "Home";
+    }
 }
 
 @section Stylesheets {
     <link rel="stylesheet" type="text/css" href="~/css/index-components.css" asp-append-version="true">
     <link rel="stylesheet" type="text/css" href="~/css/index-responsiveness.css" asp-append-version="true">
 }
+
+@* Body: *@
 
 <div class="hero grow-1">
     <h1 class="hero__heading1">Cute Cakes Only For You</h1>
@@ -29,6 +37,7 @@
 <div class="grow-1">
     <div class="photo-wrapper">
         <figure class="photo">
+            <!-- need: bandwidth responsive dpi images -->
             <img class="photo__img"
                  src="~/assets/images/cupcakes-stock-photo.jpg"
                  asp-append-version="true"
