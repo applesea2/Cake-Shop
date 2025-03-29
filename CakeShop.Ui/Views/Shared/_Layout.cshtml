@@ -128,13 +128,12 @@
             </footer>
         </div>
 
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-        <partial name="_ValidationScriptsPartial" />
+        @* <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script> *@
+        @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script> *@
+        @* <script src="~/js/site.js" asp-append-version="true"></script> *@
+        @* <partial name="_ValidationScriptsPartial" /> *@
     
-        <!-- Only add scripts if we need them for a page. -->
+        <!-- Only include scripts if we need them for a page. -->
         @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>
