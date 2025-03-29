@@ -21,20 +21,3 @@ h2 {
     width: 100%;
     padding: 20px;
 }
-/* Apply Font Awesome font only to icons */
-.fa, .fas, .far, .fal, .fab {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important; /* Ensures proper icon rendering */
-}
-/* Target Font Awesome only for icon container */
-i.fa, i.fas, i.far, i.fal, i.fab {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-}
-
-/* Optional: Make sure the icons are not inheriting other properties that affect fonts */
-.fa, .fas, .far, .fal, .fab {
-    all: unset;
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-}
