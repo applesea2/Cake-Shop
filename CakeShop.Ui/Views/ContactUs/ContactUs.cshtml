@@ -11,6 +11,7 @@
 }
 
 @section Stylesheets {
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/css/bootstrapped/contactUs.css" asp-append-version="true"/>
 }
 
@@ -20,7 +21,7 @@
 {
     @await Component.InvokeAsync("EmailSent")
 }
-    
+<body>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -41,7 +42,7 @@
                 </div>
             </address>
         </div>
-        <div class="col-md-4 mx-auto">
+        <div class="col-md-4">
             <form method="post" accept-charset="UTF-8">
                 <div class="row mb-3">                 
                     <label class="form-label" asp-for="Name">Name</label>
@@ -70,3 +71,4 @@
         </div>
     </div>
 </div>
+</body>    

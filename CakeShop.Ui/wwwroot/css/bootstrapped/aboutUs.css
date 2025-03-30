@@ -4,6 +4,7 @@
     color: #5a3e36;
     text-align: center;
 }
+
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -14,10 +15,11 @@ h2 {
     margin-top: 20px;
 }
 .container {
+    outline: 1px solid red;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically if needed */
     flex-direction: column;
-    width: 100%;
+
     padding: 20px;
 }
