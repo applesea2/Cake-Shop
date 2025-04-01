@@ -2,21 +2,14 @@
 
 @{
     Layout = "_Layout";
-}
-
-@section TitleData {
-    @{
-        ViewData["Title"] = "Menu";
-    }
+    ViewData["Title"] = "Menu";
 }
 
 @section Stylesheets {
     <link rel="stylesheet" href="~/css/bootstrapped/menu.css" asp-append-version="true"/>
 }
 
-@* Body *@
-
-<h1>Menu</h1>
+<h1>@ViewData["Title"]</h1>
 <div class="menu-container">
     <table class="menu-table">
         <thead>

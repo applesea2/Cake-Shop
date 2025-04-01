@@ -1,8 +1,5 @@
 ﻿@{
     ViewData["url"] = Context.Request.Path;
-    // Fallback title
-    ViewData["Title"] = "default title";
-    
     ViewData["ogImagePath"] = "~/assets/images/cupcakes-stock-photo.jpg";
     ViewData["ogMimeType"] = "image/jpg";
     ViewData["ogImageAltText"] = "A cake";
@@ -10,7 +7,7 @@
 
 @* Define an optional ViewData title to replace the one above. *@
 @* Used for the page <title> *@
-@RenderSection("TitleData", required: false)
+@RenderSection("TitleData", required: false);
 
 @* Define optional ViewData to replace Open Graph Protocol values above. *@
 @* Used for the meta OG tags *@
@@ -117,11 +114,9 @@
                     </ul>
                 </nav>
             </header>
-
             <main class="flex align-center">
                 @RenderBody()
             </main>
-            
             <footer>
                 <p>
                     Made by
