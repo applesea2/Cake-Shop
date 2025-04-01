@@ -16,11 +16,11 @@
 {
     @await Component.InvokeAsync("EmailSent")
 }
-<body>
+
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h1>Contact Us</h1>
+            <h1>@ViewData["Title"]</h1>
             <p>Thanks for stopping by! Drop us a message or give us a call, and we'll get back to you as soon as we can.</p>
             <address>
                 <div class="mb-3">
@@ -66,4 +66,8 @@
         </div>
     </div>
 </div>
-</body>    
+
+@section Scripts {
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+}
+
