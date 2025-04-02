@@ -173,7 +173,7 @@ SVG Arrow to the left of order button
     
     width: 6.2rem;
     height: 4rem;
-    background: url("~/assets/svg/arrow.svg");
+    background: url("/assets/svg/arrow.svg");
     
     /* position absolute (out of doc flow) relative to element with class svg-right-arrow  */
     position: absolute;
