@@ -1,4 +1,6 @@
 ﻿@{
+    /* shopName is used in multiple child pages, notably the contact page. */
+    ViewData["shopName"] = "Jesse's Homemade Cakes";
     ViewData["url"] = Context.Request.Path;
     ViewData["ogImagePath"] = "~/assets/images/cupcakes-stock-photo.jpg";
     ViewData["ogMimeType"] = "image/jpg";
@@ -11,7 +13,8 @@
 
 @functions {
     public string GenerateTitle(string pageTitle) {
-        string shopName = "Jesse's Homemade Cakes";
+        /* Null ref should not occur. */
+        string shopName = (string)ViewData["shopName"];
         if (!String.IsNullOrWhiteSpace(pageTitle)) {
             return $"{pageTitle} - {shopName}";
         }
@@ -34,6 +37,9 @@
         <link rel="stylesheet" type="text/css" href="~/css/base-overrides.css" asp-append-version="true">
         <link rel="stylesheet" type="text/css" href="~/css/utilities.css" asp-append-version="true">
         <link rel="stylesheet" type="text/css" href="~/css/base-components.css" asp-append-version="true">
+        
+        <link rel="stylesheet" type="text/css" href="~/css/media-queries/base-responsiveness.css" asp-append-version="true">
+        
         <!-- Load page-specific components after base, as some index components
         override base rules. -->
         

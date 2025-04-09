@@ -79,6 +79,12 @@ header {
         url("/assets/images/header-pattern.png") center / 15rem 15rem;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 2rem;
+}
 
 /*========
 Base button Component
@@ -93,6 +99,13 @@ Base button Component
 }
 
 /*========
+Text Component
+==========*/
+.color-danger {
+    color: red;
+}
+
+/*========
 Icon-section Component
 ==========*/
 
@@ -100,8 +113,6 @@ Icon-section Component
     display: flex;
     flex-direction: center;
     gap: 0.75rem;
-    
-    margin-top: 6.438rem;
     
     .icon-section__icon {
         width: 2rem;
@@ -115,3 +126,43 @@ Icon-section Component
     }
 }
 
+
+/*========
+Links link
+==========*/
+a.link {
+    
+}
+
+a.link.link--dotted {
+    color: #CE6372;
+    text-decoration: underline dotted;
+    text-decoration-thickness: 3px;
+    
+    transition: .4s color;
+    &:hover {
+        color: #792b38;
+    }
+}
+
+a.link.link--tel {
+    display: inline-block; /* to adjust width/height, we must change from inline display mode */
+    
+    transition: .3s scale;
+    &:hover {
+        scale: 1.03;
+    }
+    
+    /* Phone icon before telephone links */
+    &::before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        /* achieve an svg color fill via mask */
+        background-color: rgb(94, 71, 70);
+        mask: url("/assets/svg/phone.svg") no-repeat center;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+    }
+}

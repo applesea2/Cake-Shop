@@ -32,6 +32,10 @@
     height: 30rem;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 /* Spacing utilities */
 
 .mt-1rem {
@@ -100,6 +104,10 @@
 
 .top-8rem {
     top: 8rem;
+}
+
+.top-6rem {
+        margin-top: 6.438rem;
 }
 
 /* Animation effect */

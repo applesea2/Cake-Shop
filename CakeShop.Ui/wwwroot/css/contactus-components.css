@@ -1,0 +1,86 @@
+﻿
+ul.contact-info-list {
+    font-size: 2em;
+}
+ul.contact-info-list li::marker {
+    color: #FD8899;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: .8em;
+    
+    align-items: center;
+    
+    width: 15rem;
+    
+    > label {
+        display: flex;
+        flex-direction: column;
+        
+        text-align: center;
+        
+        width: 100%;
+    }
+    
+    textarea {
+        resize: vertical;
+        font-family: inherit;
+        
+        min-height: 2rem;
+    }
+    
+    input[type="text"] {
+        height: 2rem;
+        padding: .2rem;
+    }
+    
+    input[type="submit"] {
+        background-color: #1E90FFFF;
+        color: white;
+        font-weight: bold;
+        
+        border-radius: 7px;
+        
+        line-height: .9;
+        font-size: 1.2em;
+        padding: .5em 0;
+        
+        align-self: stretch;
+        
+        transition: .4s background-color;
+        &:hover {
+            background-color: #1c84ea;
+        }
+    }
+}
+
+.vcard-link {
+    address, span {
+        font-family: "Quicksand", Arial;
+        font-weight: bold;
+        font-size: 1em;
+    }
+}
+
+.maps-widget {
+    .maps-widget__photo {
+        box-shadow: 0 0 7.1px rgb(0,0,0, 16%);
+    }
+    
+    .maps-widget__text {
+        /* not sure which browser style controls a figure/ficaption/span's font-family, but we must override it here. */
+        font-family: "Quicksand", Arial;
+        font-weight: bold;
+        
+        color: #496F4F;
+    }
+    
+    .maps-widget__text--small {
+        font-size: 1.188rem;
+    }
+    .maps-widget__text--med {
+        font-size: 1.25rem;
+    }
+}
