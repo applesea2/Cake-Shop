@@ -52,7 +52,14 @@
     }
 }
 
-.contact-form {
+.form--contact-form {
+    border: 4px dashed #b7bac4;
+    border-radius: 15px;
+    
+    box-sizing: content-box;
+    padding: 1.6rem;
+    
+    
     display: flex;
     flex-direction: column;
     row-gap: .8em;
@@ -60,6 +67,11 @@
     align-items: center;
     
     width: 15rem;
+    
+    transition: .2s border;
+    &:hover {
+        border: 4px dashed #a8aec5;;
+    }
     
     > label {
         display: flex;
@@ -80,6 +92,10 @@
     input[type="text"] {
         height: 2rem;
         padding: .2rem;
+    }
+    
+    .comment-field {
+        width: calc(100% + 2rem);
     }
     
     input[type="submit"] {
