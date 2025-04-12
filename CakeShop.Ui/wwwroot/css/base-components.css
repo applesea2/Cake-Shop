@@ -111,8 +111,8 @@ Icon-section Component
 
 .icon-section {
     display: flex;
-    flex-direction: center;
     gap: 0.75rem;
+    width: fit-content;
     
     .icon-section__icon {
         width: 2rem;

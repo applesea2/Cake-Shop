@@ -1,9 +1,55 @@
-﻿
-ul.contact-info-list {
+﻿.contact-h1 {
+    line-height: 1;
+}
+
+.contact-info-list {
     font-size: 2em;
 }
-ul.contact-info-list li::marker {
+
+.contact-info-list li::marker {
     color: #FD8899;
+}
+
+/* would benefit from a <p> text mixin via SASS */
+.address {
+    font-family: "Quicksand", Arial; /* SASS would make this more maintainable. To re-work via a good sass compilation pipeline... */
+    font-weight: bold;
+    line-height: 1;
+}
+
+.maps-widget {
+    position: absolute;
+    
+    top: -1.5rem;
+    left: 20vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .maps-widget__photo {
+        box-shadow: 0 0 7.1px rgb(0,0,0, 16%);
+    }
+    
+    .maps-widget__caption {
+        margin-top: 0.625rem;
+    }
+    
+    .maps-widget__text {
+        /* not sure which browser style controls a figure/ficaption/span's font-family, but we must override it here. */
+        font-family: "Quicksand", Arial;
+        font-weight: bold;
+        
+        color: #496F4F;
+    }
+    
+    .maps-widget__text--small {
+        font-size: 1.188rem;
+    }
+    .maps-widget__text--med {
+        font-size: 1.25rem;
+    }
 }
 
 .contact-form {
@@ -53,34 +99,5 @@ ul.contact-info-list li::marker {
         &:hover {
             background-color: #1c84ea;
         }
-    }
-}
-
-.vcard-link {
-    address, span {
-        font-family: "Quicksand", Arial;
-        font-weight: bold;
-        font-size: 1em;
-    }
-}
-
-.maps-widget {
-    .maps-widget__photo {
-        box-shadow: 0 0 7.1px rgb(0,0,0, 16%);
-    }
-    
-    .maps-widget__text {
-        /* not sure which browser style controls a figure/ficaption/span's font-family, but we must override it here. */
-        font-family: "Quicksand", Arial;
-        font-weight: bold;
-        
-        color: #496F4F;
-    }
-    
-    .maps-widget__text--small {
-        font-size: 1.188rem;
-    }
-    .maps-widget__text--med {
-        font-size: 1.25rem;
     }
 }

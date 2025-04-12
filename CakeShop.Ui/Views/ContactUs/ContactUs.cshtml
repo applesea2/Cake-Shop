@@ -21,12 +21,9 @@
 <!-- We should change this to CSS Grid in the future for maintainability -->
 <div class="flex direction-column align-center w-100">
     <!-- Contact us info & the Google Map are children of this wrapper: -->
-    <div class="flex">
-        <div class="grow-1 flex direction-column">
-            <h1>Contact Us</h1>
-            <p>
-                Thanks for stopping by! Drop us a message or give us a call, and we'll get back to you as soon as we can.
-            </p>
+    <div class="flex w-85">
+        <div class="flex direction-column">
+            <h1 class="contact-h1">Contact Us</h1>
             <ul class="contact-info-list">
                 <li>
                     <p>
@@ -40,42 +37,40 @@
                 <li>
                     <p>
                         Email:
-                        <span class="iconify" data-icon="mdi:envelope" aria-hidden="true"></span>
                         <a class="link link--dotted" href="mailto:stroster.jesse@gmail.com">
+                            <span class="iconify" data-icon="mdi:envelope" aria-hidden="true"></span>
                             stroster.jesse@gmail.com
                         </a>
                     </p>
                 </li>
                 
                 <li>
-                    <p>
-                        Pick-up orders: <span class="iconify" data-icon="mdi:home" aria-hidden="true"></span>
+                    <p class="d-inline">
+                        Pick-up orders:
                     </p>
-                    <p>
-                        <a class="vcard-link" target="_blank" href="https://www.google.com.mx/maps/place/2535+Kate+St,+Holt,+MI+48842/@@42.6557629,-84.5243472,17z/">
-                            <address class="vcard">
-                                <span class="fn org">@ViewData["shopName"]</span>
-                                <span class="adr">
-                                    <span class="street-address">2535 Kate St</span>
-                                    <span class="locality">Holt</span>,
-                                    <span class="region">MI</span>
-                                    <span class="postal-code">48842</span>
-                                    <span class="country-name hidden">USA</span>
-                                </span>
-                            </address>
+                    
+                    <address class="d-inline address">
+                        <a class="link link--dotted"
+                           target="_blank"
+                           href="https://www.google.com.mx/maps/place/2535+Kate+St,+Holt,+MI+48842/@@42.6557629,-84.5243472,17z/">
+                            <span class="iconify" data-icon="mdi:home" aria-hidden="true"></span>
+                            2523 Kate St Holt, MI 48842 USA
                         </a>
-                    </p>
+                    </address>
                 </li>
                 <li>
                     <p>
                         Share with us:
-                        @await Html.PartialAsync("Components/_SocialButtonsPartial")
+                        <div class="ml-1">
+                            @await Html.PartialAsync("Components/_SocialButtonsPartial")
+                        </div>
                     </p>
                 </li>
             </ul>
         </div>
         
-        <div class="grow-1">
+         <!-- Maps Widget Wrapper -->
+        <div class="pos-relative">
             <figure class="maps-widget">
                 <!-- Future: replace with Google Maps iframe widget -->
                 <img
@@ -85,7 +80,7 @@
                 
                 <!-- If the screen-reader software implements this role value, read as a contiguous string of words.
                      Otherwise, ignore, and there will be a slight pause between the two groups of words. -->
-                <figcaption role="text">
+                <figcaption role="text" class="maps-widget__caption">
                     <span class="maps-widget__text maps-widget__text--small">
                         view on
                     </span>
