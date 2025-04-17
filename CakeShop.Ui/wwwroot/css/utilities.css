@@ -134,7 +134,7 @@
 
 /* Animation effect */
 
-.animate {
+.interact-animation {
     transition: .3s scale ease;
     &:hover {
         scale: 1.05;
