@@ -68,6 +68,11 @@
 }
 
 @media screen and (max-width: 23em) {
+            
+    h2 {
+        text-align: center;
+    }
+    
     .contact-info__list {
         li {
             text-align: center;
@@ -87,7 +92,6 @@
             /*    left: -16px;*/
             /*}*/
         }
-        
         
         svg.iconify {
             position: absolute;
@@ -113,9 +117,15 @@
         width: 70vw;
         
         input, textarea {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
-        input {
+        .form__textarea {
+            min-height: 12rem;
+        }
+        label {
+            font-size: 1.3rem;
+        }
+        input:not(.btn--submit) {
             height: 2rem;
         }
     }

@@ -69,6 +69,12 @@
     margin-left: 1rem;
 }
 
+.form {
+    .form__input {
+        font-family: "Arima"; /* override browser default */
+    }
+}
+
 .form--contact-form {
     border: 4px dashed #b9c6d7;
     border-radius: 15px;
