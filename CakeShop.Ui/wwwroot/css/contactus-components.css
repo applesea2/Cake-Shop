@@ -1,12 +1,25 @@
-﻿.contact-h1 {
+﻿.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem; /* Add some bottom margin for space between content & page bottom */
+}
+
+.contact-info {
+    display: flex;
+    width: 85%;
+}
+
+.contact-h1 {
     line-height: 1;
 }
 
-.contact-info-list {
+.contact-info__list {
     font-size: 2em;
 }
 
-.contact-info-list li::marker {
+.contact-info__list li::marker {
     color: #FD8899;
 }
 
@@ -52,8 +65,12 @@
     }
 }
 
+.icon-section-wrapper {
+    margin-left: 1rem;
+}
+
 .form--contact-form {
-    border: 4px dashed #b7bac4;
+    border: 4px dashed #b9c6d7;
     border-radius: 15px;
     
     box-sizing: content-box;
@@ -70,35 +87,50 @@
     
     transition: .2s border;
     &:hover {
-        border: 4px dashed #a8aec5;;
+        border: 4px dashed #91a4bd;;
     }
     
-    > label {
+    .form__label {
         display: flex;
         flex-direction: column;
         
         text-align: center;
         
+        position: relative;
+        
+        width: fit-content;
+    }
+    
+    /* Red asterisk after form label for required fields: */
+    .form__label:has(+ input[required])::after,
+    .form__label:has(+ textarea[required])::after{
+        content: "*";
+        color: red;
+        font-weight: bold;
+        
+        position: absolute;
+        
+        right: -1em;
+        top: .1em;
+        
+        width: 1em;
+        height: 1em;
+    }
+    
+    .form__textarea {
+        resize: vertical;
+        font-family: inherit;
+        height: 8rem;
+        min-height: 2rem;
+    }
+
+    .form__input {
+        height: 2rem;
+        padding: .2rem;
         width: 100%;
     }
     
-    textarea {
-        resize: vertical;
-        font-family: inherit;
-        
-        min-height: 2rem;
-    }
-    
-    input[type="text"] {
-        height: 2rem;
-        padding: .2rem;
-    }
-    
-    .comment-field {
-        width: calc(100% + 2rem);
-    }
-    
-    input[type="submit"] {
+    .btn--submit {
         background-color: #1E90FFFF;
         color: white;
         font-weight: bold;

@@ -79,13 +79,6 @@ header {
         url("/assets/images/header-pattern.png") center / 15rem 15rem;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    
-    margin-top: 2rem;
-}
-
 /*========
 Base button Component
 ==========*/

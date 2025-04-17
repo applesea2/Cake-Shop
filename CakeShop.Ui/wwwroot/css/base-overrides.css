@@ -55,10 +55,8 @@ body {
     border-image: linear-gradient(90deg, var(--outer-background-color) 0%, rgba(252,164,176) 100%)
     27 / .52rem;
     
-    /* Mimick a border w/ `box-sizing: border-box` and shrink the content box */
-    /* Note: only have this be present on pages that overflow */
-    /* padding: .52rem; */
-    
+    /* Mimick the space a border takes up as w/ `box-sizing: border-box` and shrink the content box */
+    padding: .52rem;
     
     /* Extend past the viewport height if we need to due to flexible-layout overflow */
     min-height: 100%;
@@ -128,6 +126,11 @@ User agent overrides
 h1 {
     color: #FD8899;
     font-size: 6rem;
+}
+
+h2 {
+    color: #CE6372;
+    font-size: 2rem;
 }
 
 p {

@@ -118,13 +118,8 @@
             <main class="flex align-center">
                 @RenderBody()
             </main>
-            <footer>
-                <p>
-                    Made by
-                    <a target="_blank" href="https://github.com/applesea2">Jesse</a>
-                    &
-                    <a target="_blank" href="https://1zzowiebeha.github.io/">Zowie</a>
-                </p>
+            <footer class="flex justify-center">
+                @RenderSection("Footer", required: false)
             </footer>
         </div>
 

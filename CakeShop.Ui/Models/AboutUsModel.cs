@@ -1,5 +1,5 @@
 ﻿namespace CakeShop.Ui.Models;
 
-public class AboutUsModel
-{
+public class AboutUsModel {
+
 }
