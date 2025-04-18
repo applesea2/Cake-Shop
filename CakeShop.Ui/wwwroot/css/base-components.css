@@ -1,3 +1,88 @@
+/*========
+Navbar components. Includes:
+    .navbar,
+    .navbar__item,
+    .navbar__link
+==========*/
+
+.navbar {
+    list-style-type: none;
+    
+    display: flex;
+    gap: 6rem;
+    height: 100%;
+    width: 100%;
+    
+    padding: 4rem 6.5rem;
+    
+    /* old background for chrome (broken) */
+    /*background: */
+    /*    linear-gradient(180deg, var(--inner-background-color), 65%, transparent),*/
+    /*    linear-gradient(90deg, var(--inner-background-color), 15%, transparent),*/
+    /*    linear-gradient(270deg, var(--inner-background-color), 15%, transparent),*/
+    /*    linear-gradient(0deg, var(--inner-background-color), 65%, transparent),*/
+    /*    radial-gradient(circle at 20% center, var(--outer-background-color), 10%, transparent),*/
+    /*    url("/assets/images/header-pattern.png") center / 15rem 15rem;*/
+    
+    & .navbar__item {
+        & .navbar__link {
+            color: #e35369;
+            font-size: 1.6rem;
+            font-family: "Arima";
+   
+            font-weight: 600;
+            
+            text-decoration: none;
+            
+            &:hover {
+                color: #ab1229;
+            }
+        }
+    }
+}
+
+/*========
+Firefox navbar rendering bug work-around:
+(chrome updated linear-gradient to be weird so let's just use this to make it standard)
+========*/
+
+/*
+Note: Header and descendants are completely outside of the document flow
+  in order to work around a Firefox gradient render issue.
+*/
+header {
+    width: 100%;
+    position: relative;
+}
+
+.navbar {
+    /* Remove the broken gradient background + background image */
+    background: none;
+    
+    > .navbar__item {
+        z-index: 1; /* allow for pointer events. Why do pointer events not work without z-index? it looks fine visually */
+    }
+}
+/* Header background image with gradient overlay for linear gradient opacity effect */
+.navbar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: opacity(.5); /* Apply opacity to the whole element (gradient overlay + image) to mimick the effect */
+    
+    background: 
+        url("/assets/images/header-gradient-alternate.png") center / 100% 100% no-repeat,
+        url("/assets/images/header-pattern.png") center / 15rem 15rem;
+}
+
+/*========
+Base button Component
+==========*/
+
 .btn {
     border: none;
     background: none;
@@ -6,13 +91,71 @@
     cursor: pointer;
 }
 
-.icon {
-    width: 2rem;
-    aspect-ratio: 1/1;
+/*========
+Text Component
+==========*/
+.color-danger {
+    color: red;
 }
 
-.icon--instagram {
-    /* This will allow clicks to be ignored by the <embed> so that the anchor link works correctly. */
-    /* todo: understand why clicks are captured by <embed> but ignored by parent <a> */
-    pointer-events: none;
+/*========
+Icon-section Component
+==========*/
+
+.icon-section {
+    display: flex;
+    gap: 0.75rem;
+    width: fit-content;
+    
+    .icon-section__icon {
+        width: 2rem;
+        aspect-ratio: 1/1;
+    }
+    
+    .icon-section__icon--instagram {
+        /* This will allow clicks to be ignored by the <embed> so that the anchor link works correctly. */
+        /* learning todo: understand why clicks are captured by <embed>, but ignored by parent <a> */
+        pointer-events: none;
+    }
+}
+
+
+/*========
+Links link
+==========*/
+a.link {
+    
+}
+
+a.link.link--dotted {
+    color: #CE6372;
+    text-decoration: underline dotted;
+    text-decoration-thickness: 3px;
+    
+    transition: .4s color;
+    &:hover {
+        color: #792b38;
+    }
+}
+
+a.link.link--tel {
+    display: inline-block; /* to adjust width/height, we must change from inline display mode */
+    
+    transition: .3s scale;
+    &:hover {
+        scale: 1.03;
+    }
+    
+    /* Phone icon before telephone links */
+    &::before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        /* achieve an svg color fill via mask */
+        background-color: rgb(94, 71, 70);
+        mask: url("/assets/svg/phone.svg") no-repeat center;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+    }
 }

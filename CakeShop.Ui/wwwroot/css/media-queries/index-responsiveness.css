@@ -1,0 +1,19 @@
+/* Index page media queries, descending in screen width */
+
+@media screen and (max-width: 75.25em) {
+    div.photo-wrapper {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 40.625em) {
+    div.hero {
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    div.hero .btn.svg-right-arrow::before {
+        content: none; /* hide right-pointing arrow */
+    }
+}

@@ -1,6 +1,5 @@
-﻿body{
+body, i{
     font-family: 'Georgia', serif;
-    background-color: #f8f1e4;
     color: #5a3e36;
     text-align: center;
 }
@@ -12,6 +11,11 @@ h1 {
 h2 {
     font-size: 24px;
     margin-top: 20px;
+}
+/* override bootstrap reset to retain base overrides */
+.navbar {
+    justify-content: flex-start;
+    padding: 4rem 6.5rem;
 }
 .container {
     display: flex;

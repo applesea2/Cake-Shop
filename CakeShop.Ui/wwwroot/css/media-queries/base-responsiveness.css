@@ -1,0 +1,61 @@
+﻿/* MAJOR TODO: Refactor this all to be more maintainable via SASS! (@layers are blocking code so no bueno) */
+/* Base media queries, descending in screen width */
+
+@media screen and (max-width: 75.25em) {
+    main {
+        flex-direction: column;
+    }
+    
+    body {
+        /* padding to pretend we have content-box: border-box content box shrinkage
+           with the border-image */
+        /* add some to the bottom for some gap between the content and border-image */
+        padding: .52rem .52rem calc(.52rem + 2rem) .52rem;
+    }
+}
+
+@media screen and (max-width: 70em) {
+    ul.navbar {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 40.625em) {
+    ul.navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        
+        .navbar__item {
+            width: 100%;
+            text-align: center;    
+        }
+        .navbar__link {
+            display: inline-block; /* allow us to adjust width */
+            width: 100%;
+        }
+    }
+    
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 36.375em) {
+    main {
+        padding: 0 3rem;
+    }
+    h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    main {
+        padding: 0 3rem;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+}

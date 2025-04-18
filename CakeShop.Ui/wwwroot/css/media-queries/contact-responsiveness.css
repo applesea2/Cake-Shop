@@ -1,0 +1,132 @@
+﻿@media screen and (max-width: 119em) {
+    .maps-widget {
+        left: 5vw;
+    }
+}
+
+@media screen and (max-width: 75em) {
+    .maps-widget {
+         position: static;
+         margin-bottom: 2rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+}
+
+/* use BEM instead */
+@media screen and (max-width: 58.188em) {
+    .contact-info__list {
+        li > p > a,
+        li > address > a {
+            display: block;
+            margin-left: 1.5em;
+        }
+    }
+    /* Win via specificity */
+    .contact-info__list li a.link.link--tel {
+        display: block;
+    }
+    
+    .form--contact-form {
+        width: 25rem;
+        & .form__textarea {
+            width: 100%;
+        }
+    } 
+}
+
+@media screen and (max-width: 44.75em) {
+    .main-content-wrapper {
+        width: 90vw; /* adjust width to non-percent unit so we can take up main's padding given border-box's behavior. */
+    }
+        
+    h1.contact-h1 {
+        text-align: center;
+        font-size: 2.4rem;
+    }
+    
+    .icon-section {
+        justify-content: center;
+    }
+    
+    .contact-info__list {
+        align-self: flex-start;
+        font-size: 1.4em;
+        list-style-type: none;
+        
+        li svg {
+            font-size: 1.3rem;
+        }
+    }
+    
+    .maps-widget {
+        margin-top: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 23em) {
+            
+    h2 {
+        text-align: center;
+    }
+    
+    .contact-info__list {
+        li {
+            text-align: center;
+            p {
+                font-size: 1.2em;
+            }
+        }
+        li > p > a,
+        li > address > a {
+            margin-left: 0;
+            font-size: .9em;
+            margin-bottom: .5em;
+            position: relative;
+            
+            /*&.link--tel::before {*/
+            /*    position: absolute;*/
+            /*    left: -16px;*/
+            /*}*/
+        }
+        
+        svg.iconify {
+            position: absolute;
+            left: -16px;
+        }
+        
+        .icon-section-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-left: 0;
+            margin-top: .5rem;
+            
+            .icon-section {
+                font-size: 2rem;
+                .icon-section__icon {
+                    width: 3rem;
+                }
+            }
+        }
+    }
+    
+    .form.form--contact-form {
+        width: 70vw;
+        
+        input, textarea {
+            font-size: 1.6rem;
+        }
+        .form__textarea {
+            min-height: 12rem;
+        }
+        label {
+            font-size: 1.3rem;
+        }
+        input:not(.btn--submit) {
+            height: 2rem;
+        }
+    }
+}

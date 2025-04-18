@@ -2,66 +2,150 @@
 
 @{
     Layout = "_Layout";
+    ViewData["Title"] = "Contact Us";
 }
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Menu</title>
-    <link rel="stylesheet" href="~/css/ContactUs.css" asp-append-version="true"/>
-</head>
-<body>
-    @if (ViewData["EmailSent"] as bool? == true)
-    {
-        @await Component.InvokeAsync("EmailSent")
-    }
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h1>Contact Us</h1>
-            <p>Thanks for stopping by! Drop us a message or give us a call, and we'll get back to you as soon as we can.</p>
-            <address>
-                <div class="mb-3">
-                    <span class="iconify" data-icon="mdi:home"></span>
-                    <label>2535 Kate St Holt, MI 48842</label>
-                </div>
-                <div class="mb-3">
-                    <span class="iconify" data-icon="mdi:phone"></span>
-                    <label>Phone: <a href="tel:+12486866636">(248) 686-6636</a></label>
-                </div>
-                <div class="mb-3">
-                    <span class="iconify" data-icon="mdi:envelope"></span>
-                    <label>Email: <a href="mailto:stroster.jesse@gmail.com">stroster.jesse@gmail.com</a></label>
-                </div>
-            </address>
+@section Stylesheets {
+    <link rel="stylesheet" href="~/css/contactus-components.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/media-queries/contact-responsiveness.css" asp-append-version="true"/>
+}
+
+@* Page code: *@
+
+@if (ViewData["EmailSent"] as bool? == true)
+{
+    @await Component.InvokeAsync("EmailSent")
+}
+
+@* Body: *@
+
+<!-- Important:
+* We should change this to CSS Grid in the future for maintainability.
+* The CSS codebase will also need a rewrite via Sass Mixins & Modules for maintainability.
+ -->
+ 
+ @* refactor wrapper to be in _Layout. allow child pages to override *@
+ 
+ <div class="main-content-wrapper">
+    <!-- Contact us info & the Google Map are children of this wrapper: -->
+    <article class="contact-info">
+        <div class="flex direction-column">
+            <h1 class="contact-h1">Contact Us</h1>
+            <ul class="contact-info__list">
+                <li>
+                    <p class="d-inline">
+                        Call us:
+                    </p>
+                    <p class="d-inline">
+                        <a href="tel:+12486866636" class="link link--tel link--dotted">
+                            (248) 686-6636
+                        </a>
+                    </p>
+                </li>
+                
+                <li>
+                    <p class="d-inline">
+                        Email:
+                    </p>
+                    <p class="d-inline">
+                        <a href="mailto:stroster.jesse@gmail.com" class="link link--dotted">
+                            <span aria-hidden="true" data-icon="famicons:mail" class="iconify"></span>
+                            stroster.jesse<wbr>@@gmail.com
+                        </a>
+                    </p>
+                </li>
+                
+                <li>
+                    <p class="d-inline">
+                        Pick-up orders:
+                    </p>
+                    
+                    <address class="d-inline address">
+                        <a href="https://www.google.com.mx/maps/place/2535+Kate+St,+Holt,+MI+48842/@@42.6557629,-84.5243472,17z/"
+                           target="_blank"
+                           class="link link--dotted">
+                            <span aria-hidden="true" data-icon="famicons:home" class="iconify"></span>
+                            2523 Kate St Holt, MI 48842 USA
+                        </a>
+                    </address>
+                </li>
+                <li>
+                    <p>
+                        Share with us:
+                        <div class="icon-section-wrapper">
+                            @await Html.PartialAsync("Components/_SocialButtonsPartial")
+                        </div>
+                    </p>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-4 mx-auto">
-            <form method="post" accept-charset="UTF-8">
-                <div class="row mb-3">                 
-                    <label class="form-label" asp-for="Name">Name</label>
-                    <input class="form-control" asp-for="Name" >
-                    <span class="text-danger" asp-validation-for="Name"></span>
-                </div>
-                <div class="row mb-3">                  
-                    <label class="form-label" asp-for="Email">Email</label>
-                    <input class="form-control" asp-for="Email">
-                    <span class="text-danger" asp-validation-for="Email"></span>
-                </div>
-                <div class="row mb-3">
-                    <label class="form-label" asp-for="Phone">Phone</label>
-                    <input class="form-control" asp-for="Phone">
-                    <span class="text-danger" asp-validation-for="Phone"></span>
-                </div>
-                <div class="row mb-3">
-                    <label class="form-label" asp-for="Comment">Comments/Questions</label>
-                    <textarea class="form-control" asp-for="Comment" style="height:200px"></textarea>
-                    <span class="text-danger" asp-validation-for="Comment"></span>
-                </div>
-                <div class="row mb-3">
-                    <button class="btn btn-primary" type="submit" value="Submit" asp-action="OnSubmit">Submit</button>
-                </div>
-            </form>
+        
+         <!-- Maps Widget Wrapper -->
+        <div class="pos-relative">
+            <figure class="maps-widget">
+                <!-- Future: replace with Google Maps iframe widget -->
+                <img
+                    class="maps-widget__photo"
+                    src="~/assets/images/google-maps.png"
+                    alt="A static image of a Google Maps illustrated 2D top-down street view."/>
+                
+                <!-- If the screen-reader software implements this role value, read as a contiguous string of words.
+                     Otherwise, ignore, and there will be a slight pause between the two groups of words. -->
+                <figcaption role="text" class="maps-widget__caption">
+                    <span class="maps-widget__text maps-widget__text--small">
+                        view on
+                    </span>
+                    <span class="maps-widget__text maps-widget__text--med">
+                        Google Maps
+                    </span>
+                </figcaption>
+            </figure>
         </div>
-    </div>
+    </article>
+    
+    <!-- Contact Form underneath Contact Us info list & the Google Map -->
+    <article>
+        <h2>
+            Talk to us:
+        </h2>
+        <form method="POST" accept-charset="UTF-8" class="form form--contact-form">
+            <label asp-for="Name" class="form__label">
+                Name
+            </label>
+            <input asp-for="Name" required type="text" class="form__input"/>
+            <p asp-validation-for="Name" class="color-danger"></p>
+            
+            
+            <label asp-for="Email" class="form__label">
+                Email
+            </label>
+            <input asp-for="Email" required type="email" class="form__input"/>
+            <p asp-validation-for="Email" class="color-danger"></p>
+            
+            
+            <label asp-for="Phone" class="form__label">
+                Phone
+            </label>
+            <input asp-for="Phone" required type="tel" class="form__input"/>
+            <p asp-validation-for="Phone" class="color-danger"></p>
+            
+            <label asp-for="Comment" class="form__label">
+                Comments/Questions
+            </label>
+            <textarea asp-for="Comment" required class="form__textarea"></textarea>
+            <p asp-validation-for="Comment" class="color-danger"></p>
+            
+            <input asp-action="OnSubmit"
+                   type="submit"
+                   value="Submit"
+                   class="btn btn--submit"/>
+        </form>
+    </article>
+
 </div>
-</body>
+
+
+@section Scripts {
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+}
+

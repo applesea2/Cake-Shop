@@ -1,0 +1,73 @@
+﻿@model ContactUsModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Contact Us";
+}
+
+@section Stylesheets {
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/bootstrapped/contactUs.css" asp-append-version="true"/>
+}
+
+@* Page code: *@
+
+@if (ViewData["EmailSent"] as bool? == true)
+{
+    @await Component.InvokeAsync("EmailSent")
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>@ViewData["Title"]</h1>
+            <p>Thanks for stopping by! Drop us a message or give us a call, and we'll get back to you as soon as we can.</p>
+            <address>
+                <div class="mb-3">
+                    <span class="iconify" data-icon="mdi:home"></span>
+                    <label>2535 Kate St Holt, MI 48842</label>
+                </div>
+                <div class="mb-3">
+                    <span class="iconify" data-icon="mdi:phone"></span>
+                    <label>Phone: <a href="tel:+12486866636">(248) 686-6636</a></label>
+                </div>
+                <div class="mb-3">
+                    <span class="iconify" data-icon="mdi:envelope"></span>
+                    <label>Email: <a href="mailto:stroster.jesse@gmail.com">stroster.jesse@gmail.com</a></label>
+                </div>
+            </address>
+        </div>
+        <div class="col-md-4">
+            <form method="post" accept-charset="UTF-8">
+                <div class="row mb-3">                 
+                    <label class="form-label" asp-for="Name">Name</label>
+                    <input class="form-control" asp-for="Name" >
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <div class="row mb-3">                  
+                    <label class="form-label" asp-for="Email">Email</label>
+                    <input class="form-control" asp-for="Email">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+                <div class="row mb-3">
+                    <label class="form-label" asp-for="Phone">Phone</label>
+                    <input class="form-control" asp-for="Phone">
+                    <span class="text-danger" asp-validation-for="Phone"></span>
+                </div>
+                <div class="row mb-3">
+                    <label class="form-label" asp-for="Comment">Comments/Questions</label>
+                    <textarea class="form-control" asp-for="Comment" style="height:200px"></textarea>
+                    <span class="text-danger" asp-validation-for="Comment"></span>
+                </div>
+                <div class="row mb-3">
+                    <button class="btn btn-primary" type="submit" value="Submit" asp-action="OnSubmit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+}
+

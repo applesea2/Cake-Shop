@@ -1,99 +1,134 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script type="importmap"></script>
-    <!-- todo: research favicons, implement responsive dpi versions -->
-    <!-- todo: improve icon design -->
-    <link rel="icon" type="image/x-icon" href="~/images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="~/css/base-overrides.css">
-    <link rel="stylesheet" type="text/css" href="~/css/utilities.css">
-    <!-- Load index components after index, as some index components
-    override base rules via BEM modifiers (i.e CSS cascade is in effect). -->
-    <link rel="stylesheet" type="text/css" href="~/css/base-components.css">
-    <link rel="stylesheet" type="text/css" href="~/css/index-components.css">
+﻿@{
+    /* shopName is used in multiple child pages, notably the contact page. */
+    ViewData["shopName"] = "Jesse's Homemade Cakes";
+    ViewData["url"] = Context.Request.Path;
+    ViewData["ogImagePath"] = "~/assets/images/cupcakes-stock-photo.jpg";
+    ViewData["ogMimeType"] = "image/jpg";
+    ViewData["ogImageAltText"] = "A cake";
+}
+
+@* Define optional ViewData to replace Open Graph Protocol values above. *@
+@* Used for the meta OG tags *@
+@RenderSection("openGraphData", required: false)
+
+@functions {
+    public string GenerateTitle(string pageTitle) {
+        /* Null ref should not occur. */
+        string shopName = (string)ViewData["shopName"];
+        if (!String.IsNullOrWhiteSpace(pageTitle)) {
+            return $"{pageTitle} - {shopName}";
+        }
         
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+        return shopName;
+    }
+}
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-</head>
-<body>
-<header class="mt-4rem">
-    <nav>
-        <ul class="navbar">
-            <!--  todo: hire an artist to make a logo -->
-            <li class="navbar__item hidden">
-                <p>
-                    <img class="logo" src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
-                </p>
-            </li>
-            <li class="navbar__item">
-                <p>
-                    <a class="navbar__link" href="#">Home</a>
-                </p>
-            </li>
-            <li class="navbar__item">
-                <p>
-                    <a class="navbar__link" href="#">Menu</a>
-                </p>
-            </li>
-            <li class="navbar__item">
-                <p>
-                    <a class="navbar__link" href="#">Contact Us</a>
-                </p>
-            </li>
-            <li class="navbar__item"> 
-                <p>
-                    <a class="navbar__link" href="#">About Us</a>
-                </p>
-            </li>
-        </ul>
-    </nav>
-</header>
-@*<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item px-3 fw-bold">
-                        <a class="nav-link" style="color: coral; font-size: large" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item px-3 fw-bold">
-                        <a class="nav-link" style="color: coral; font-size: large" asp-area="" asp-controller="Menu" asp-action="Menu">Menu</a>
-                    </li>
-                    <li class="nav-item px-3 fw-bold">
-                        <a class="nav-link" style="color: coral; font-size: large" asp-area="" asp-controller="ContactUs" asp-action="ContactUs">Contact Us</a>
-                    </li>
-                    <li class="nav-item px-3 fw-bold">
-                        <a class="nav-link" style="color: coral; font-size: large" asp-area="" asp-controller="AboutUs" asp-action="AboutUs">About Us</a>
-                    </li>
-                </ul>
-            </div>
+        
+        <!-- Todo: research favicons, implement responsive dpi versions -->
+        <!-- Todo: improve icon design -->
+        <link rel="icon" type="image/x-icon" href="~/assets/images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="~/css/base-overrides.css" asp-append-version="true">
+        <link rel="stylesheet" type="text/css" href="~/css/utilities.css" asp-append-version="true">
+        <link rel="stylesheet" type="text/css" href="~/css/base-components.css" asp-append-version="true">
+        
+        <link rel="stylesheet" type="text/css" href="~/css/media-queries/base-responsiveness.css" asp-append-version="true">
+        
+        <!-- Load page-specific components after base, as some index components
+        override base rules. -->
+        
+        <!-- Page-specific stylesheets -->
+        @RenderSection("Stylesheets", required: false)
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        
+        <!-- Open Graph Protocol for rich Social Media embeds -->
+        <meta property="og:title" content="@GenerateTitle((string?)ViewData["Title"])" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="@ViewData["url"]" />
+        
+        <meta property="og:image" content="@ViewData["ogImagePath"]" />
+        <meta property="og:image:type" content="@ViewData["ogMimeType"]" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:image:alt" content="@ViewData["ogImageAltText"]" />
+        
+        <title>
+            @GenerateTitle((string?)ViewData["Title"])
+        </title>
+    </head>
+    <body>
+        <div class="flexible-layout">
+            <header>
+                <nav>
+                    <ul class="navbar">
+                        <!--  todo: hire an artist to make a company logo -->
+                        <li class="navbar__item hidden">
+                            <p>
+                                <a asp-controller="Home" asp-action="Index" class="navbar__link">
+                                    <img class="logo" src="" alt="A light pink colored illustration of two macaroons with the text Jesse's Homemade Cakes above them."/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="navbar__item">
+                            <p>
+                                <a  class="navbar__link" asp-controller="Home" asp-action="Index">
+                                    Home
+                                </a>
+                            </p>
+                        </li>
+                        <li class="navbar__item">
+                            <p>
+                                <a  class="navbar__link" asp-controller="Menu" asp-action="Menu">
+                                    Menu
+                                </a>
+                            </p>
+                        </li>
+                        <li class="navbar__item">
+                            <p>
+                                <!-- Todo: create controller for order -->
+                                <a class="navbar__link" asp-controller="ContactUs" asp-action="ContactUs" >
+                                    Contact Us
+                                </a>
+                            </p>
+                        </li>
+                        <li class="navbar__item"> 
+                            <p>
+                                <a class="navbar__link" asp-controller="AboutUs" asp-action="AboutUs">
+                                    About
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="flex align-center">
+                @RenderBody()
+            </main>
+            <footer class="flex justify-center">
+                @RenderSection("Footer", required: false)
+            </footer>
         </div>
-    </nav>
-</header>*@
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-<partial name="_ValidationScriptsPartial" />
-@await RenderSectionAsync("Scripts", required: false)
-</body>
+
+        @* <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script> *@
+        @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script> *@
+        @* <script src="~/js/site.js" asp-append-version="true"></script> *@
+        @* <partial name="_ValidationScriptsPartial" /> *@
+    
+        <!-- Only include scripts if we need them for a page. -->
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
 </html>

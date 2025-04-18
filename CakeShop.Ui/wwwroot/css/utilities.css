@@ -2,12 +2,8 @@
     display: none;
 }
 
-/* Debug utilities */
-.ol-on {
-    outline: 1px solid red;
-}
-
 /* Typography utilities */
+
 .text-center {
     text-align: center;
 }
@@ -21,15 +17,19 @@
 }
 
 .dotted-anchor {
-    /* text-decoration-style: dotted;
-    text-decoration-thickness: 12.5%;
-    text-underline-offset: 15.5%; */
     text-decoration: none;
     border-bottom: 3px dotted;
     
 }
 
+/* Display utilities */
+
+.d-inline {
+    display: inline;
+}
+
 /* Sizing utilities */
+
 .w-40rem {
     width: 40rem;
 }
@@ -38,6 +38,17 @@
     height: 30rem;
 }
 
+.w-75 {
+    width: 75%;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-100 {
+    width: 100%;
+}
 
 /* Spacing utilities */
 
@@ -49,8 +60,16 @@
     margin-top: 1em;
 }
 
+.mb-1rem {
+    margin-bottom: 1rem;
+}
+
 .mt-4rem {
     margin-top: 4rem;
+}
+
+.ml-1 {
+    margin-left: 1rem;
 }
 
 /* Flex utilities */
@@ -86,3 +105,42 @@
 .g-075 {
     gap: 0.75rem;
 }
+
+/* Positional Utilities */
+
+.pos-absolute {
+    position: absolute;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.m-top-m5 {
+    top: -5rem;
+}
+
+.right-6rem {
+    right: 6rem;
+}
+
+.top-8rem {
+    top: 8rem;
+}
+
+.top-6rem {
+        margin-top: 6.438rem;
+}
+
+/* Animation effect */
+
+.interact-animation {
+    transition: .3s scale ease;
+    &:hover {
+        scale: 1.05;
+    }
+    &:active {
+        scale: .85;
+    }
+}
+

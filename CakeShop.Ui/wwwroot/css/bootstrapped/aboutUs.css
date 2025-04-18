@@ -1,0 +1,29 @@
+﻿/* Demo styles. Will be updated soon.. */
+
+h1 {
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: "Arima";
+}
+
+.about__text {
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    flex-direction: column;
+
+    padding: 20px;
+}
+
+img {
+    margin-top: 1rem;
+    border-radius: 16px;
+    width: 25%;
+    aspect-ratio: 1/1;
+}
