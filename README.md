@@ -33,6 +33,6 @@ Next, create a fork of the repository on GitHub's website.
 
 Create a new local branch for that fork, and create your changes.
 
-Then, on the original repository, create a pull request to merge your fork's branch into main.
+Then, on the original repository's GitHub page, create a pull request to merge your fork's branch into main.
 
 We will then review your changes. We may request additional changes before we can merge into main.
