@@ -15,11 +15,11 @@
     line-height: 1;
 }
 
-.contact-info__list {
+.info-list {
     font-size: 2em;
 }
 
-.contact-info__list li::marker {
+.info-list li::marker {
     color: #FD8899;
 }
 

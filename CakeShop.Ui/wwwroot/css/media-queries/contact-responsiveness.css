@@ -2,6 +2,14 @@
     .maps-widget {
         left: 5vw;
     }
+    
+    .form--contact-form {
+        width: 25rem;
+        
+        & .form__textarea {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 75em) {
@@ -13,28 +21,41 @@
     .contact-info {
         flex-direction: column;
     }
+    
+        .form.form--contact-form {
+        width: 70vw;
+        
+        .form__input, textarea {
+            font-size: 1.6rem;
+        }
+        .form__textarea {
+            min-height: 12rem;
+        }
+        .form__label {
+            font-size: 1.3rem;
+        }
+        
+        .form__input:not(.btn--submit) {
+            height: 2rem;
+        }
+    }
 }
 
 /* use BEM instead */
 @media screen and (max-width: 58.188em) {
-    .contact-info__list {
-        li > p > a,
-        li > address > a {
+    .info-list {
+        .info-list__item > p > a,
+        .info-list__item > address > a {
             display: block;
             margin-left: 1.5em;
         }
     }
+    
     /* Win via specificity */
-    .contact-info__list li a.link.link--tel {
+    .info-list li a.link.link--tel {
         display: block;
     }
     
-    .form--contact-form {
-        width: 25rem;
-        & .form__textarea {
-            width: 100%;
-        }
-    } 
 }
 
 @media screen and (max-width: 44.75em) {
@@ -42,7 +63,7 @@
         width: 90vw; /* adjust width to non-percent unit so we can take up main's padding given border-box's behavior. */
     }
         
-    h1.contact-h1 {
+    .contact-h1 {
         text-align: center;
         font-size: 2.4rem;
     }
@@ -51,12 +72,12 @@
         justify-content: center;
     }
     
-    .contact-info__list {
+    .info-list {
         align-self: flex-start;
         font-size: 1.4em;
         list-style-type: none;
         
-        li svg {
+        .info-list__item svg {
             font-size: 1.3rem;
         }
     }
@@ -64,24 +85,32 @@
     .maps-widget {
         margin-top: 2rem;
     }
-    
 }
 
 @media screen and (max-width: 23em) {
-            
+    .contact-h1 {
+        text-align: center;
+        font-size: 2.6rem;
+        margin-bottom: .6rem;
+    }
+    
     h2 {
         text-align: center;
     }
     
-    .contact-info__list {
-        li {
+    .address {
+        margin-bottom: 15rem;
+    }
+    
+    .info-list {
+        .info-list__item {
             text-align: center;
             p {
                 font-size: 1.2em;
             }
         }
-        li > p > a,
-        li > address > a {
+        .info-list__item > p > a,
+        .info-list__item > address > a {
             margin-left: 0;
             font-size: .9em;
             margin-bottom: .5em;
@@ -94,8 +123,12 @@
         }
         
         svg.iconify {
-            position: absolute;
-            left: -16px;
+            display: block;
+            position: relative;
+            
+            
+            left: 46%; /* not sure why this results in a correct 50% left position rather than 50% */
+            
         }
         
         .icon-section-wrapper {
@@ -110,23 +143,6 @@
                     width: 3rem;
                 }
             }
-        }
-    }
-    
-    .form.form--contact-form {
-        width: 70vw;
-        
-        input, textarea {
-            font-size: 1.6rem;
-        }
-        .form__textarea {
-            min-height: 12rem;
-        }
-        label {
-            font-size: 1.3rem;
-        }
-        input:not(.btn--submit) {
-            height: 2rem;
         }
     }
 }
