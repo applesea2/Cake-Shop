@@ -6,6 +6,13 @@ This is an MIT licensed cake store.
 
 It's built with N-Tier architecture.
 
+## ⚠️ Usage Agreement:
+
+If you decide to host this repo or adapt it,
+please do not include original contact information (phone number, address, email, names) on the site.
+
+(we should probably take from environment variables to make this a non-issue)
+
 ## Tech stack:
 
 ### Front-end:
