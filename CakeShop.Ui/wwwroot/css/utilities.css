@@ -2,7 +2,15 @@
     display: none;
 }
 
+.rounded-med {
+    border-radius: 20px;
+}
+
 /* Typography utilities */
+
+.nowrap {
+    white-space: nowrap;
+}
 
 .text-center {
     text-align: center;

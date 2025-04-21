@@ -52,6 +52,10 @@
 }
 
 @media screen and (max-width: 30em) {
+    ul.navbar {
+        padding: 4rem 0;
+    }
+    
     main {
         padding: 0 3rem;
     }

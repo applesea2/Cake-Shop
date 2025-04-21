@@ -1,0 +1,47 @@
+﻿@media screen and (max-width: 70.938em) {
+    .about__section {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        
+    }
+    .about__text,
+    .credits__text {
+        width: 75vw;
+    }
+}
+
+
+@media screen and (max-width: 36.563em) {
+    .about__heading1 {
+        text-align: center;
+        margin: 0;
+        font-size: 2rem;
+    }
+    
+    .about__text,
+    .credits__text {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 31.688em) {
+    .about__section {
+        .about__text {
+            font-size: 1.2rem;
+        }
+    }
+    .about__credits {
+        gap: 2rem;
+        
+        .credits__text {
+            width: 45vw;
+        }
+    }
+}
+
+@media screen and (max-width: 23em) {
+    .about__img {
+        width: 13rem;
+    }
+}
