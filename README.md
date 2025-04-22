@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/b12036fc-f73b-493c-9664-38e93f67544a)
 
-# Cake-Shop
+# ⭐️ Cake-Shop
 
 This is an MIT licensed cake store.
 
@@ -13,21 +13,21 @@ please do not include original contact information (phone number, address, email
 
 (we should probably take from environment variables to make this a non-issue)
 
-## Tech stack:
+## ⚙️ Tech stack:
 
-### Front-end:
+### 🏡 Front-end:
 
 HTML, CSS, Razor, JavaScript
 
-### Back-end:
+### 🏗️ Back-end:
 
 C#, SQL Server, and ASP.NET
 
-### CI/CD pipeline
+### 🛣️ CI/CD pipeline
 
 Uses GitHub Actions to build & deploy to Azure
 
-## Contributing Guide:
+## ✊ Contributing Guide:
 
 To contribute, first create an issue.
 Next, tag your issue appropriately as to whether it's a bug fix or a feature.
@@ -43,3 +43,7 @@ Create a new local branch for that fork, and create your changes.
 Then, on the original repository's GitHub page, create a pull request to merge your fork's branch into main.
 
 We will then review your changes. We may request additional changes before we can merge into main.
+
+## ⚖️ License
+
+MIT License
