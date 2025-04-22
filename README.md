@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/b12036fc-f73b-493c-9664-38e93f67544a)
 
-# ⭐️ Cake-Shop
+# 🎂 Cake-Shop
 
 This is an MIT licensed cake store.
 
