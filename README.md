@@ -46,4 +46,4 @@ We will then review your changes. We may request additional changes before we ca
 
 ## ⚖️ License
 
-MIT License
+[MIT License](https://github.com/applesea2/Cake-Shop/blob/main/LICENSE)
