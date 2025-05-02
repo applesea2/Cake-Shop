@@ -53,7 +53,7 @@ Uses GitHub Actions to build & deploy to Azure
 10. Then, on the original or the main repository's GitHub page, create a pull request to merge your fork's branch into main.
 11. We will then review your changes. We may request additional change commits from you before we can merge into main.
 
-Thank you to all contributions! We appreciate you and your efforts 💗
+Thank you to all contributors! We appreciate you and your efforts 💗
 
 ## ⚖️ License
 
