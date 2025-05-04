@@ -1,0 +1,129 @@
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    outline: 2px solid blue;
+}
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    .filter__heading {
+        font-size: 1.25rem;
+    }
+    
+    .filter__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .2rem;
+        width: 30rem;
+
+
+        /* first 4 buttons */
+
+        button:nth-child(-1n+4) {
+            /* set all to take up 1/4th of available space, minus the gap between elements */
+            /* 3 gaps between the 4 buttons. .2rem * 4 = .6rem in total. .6rem / 4 buttons gives us the amount to take from
+              each button's width which will account for the gap between them and not overflow buttons onto the next line
+              due to 100%/4 and gap present. */
+            flex-basis: calc((100% / 4) - 0.15rem);
+        }
+
+        button:nth-child(1n+5) {
+            flex-grow: 1;
+        }
+
+        button {
+            /* https://stackoverflow.com/a/40069280/12637568 */
+            --border-width: 3px;
+            border:none;
+            border: var(--border-width) dashed #F7DFDF;
+            background: #F7DFDF;
+
+            color: #F7566D;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1;
+            font-family: "Arima", Arial, sans-serif;
+            padding: calc(.6rem - var(--border-width)) calc(.7rem - var(--border-width));
+
+            cursor: pointer;
+
+            transition: .5s background, 1s color, 1s border;
+
+            &:hover {
+                background: #e8d0d0;
+            }
+
+            &:active, &.active {
+                color: #7B2D39;
+                background: #E4C6C6;
+                border: var(--border-width) dashed #7B2D39;
+            }
+        }
+
+    }
+    
+}
+
+
+.cake-list {
+    /* idea for a css ide tool: suggestions for nested css classnames based on nested classes in html file */
+    .cake-card {
+        position: relative;
+        
+        .cake-card__photo {
+            border-radius: 9px;
+            width: 16.875rem;
+            height: 19rem;
+            object-fit: cover;
+            
+            box-sizing: border-box;
+            border-image-source: linear-gradient(to bottom, rgb(233, 63, 88, .25) 0%, rgb(185, 74, 90, .25) 58%, rgb(236, 116, 188, .25) 100%);
+        }
+        
+        .details {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            
+            padding: 1.1rem 0.5rem 0.6rem 0.5rem;
+            background-color: rgb(50, 48, 49, .62);
+            border-radius: 3px;
+            
+            .details__top-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            .details__bottom-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+            }
+            
+            .details__allergen-icon {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .details__text {
+                font-family: "Arima";
+                color: white;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                filter: drop-shadow(0 2px rgb(0,0,0,.25));
+            } 
+            
+            .details__text--med {
+                font-size: 20px;
+            }
+            
+            .icon--arrow {
+                font-size: 20px;
+            }
+        }
+    }
+}
+

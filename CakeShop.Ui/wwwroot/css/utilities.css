@@ -2,6 +2,10 @@
     display: none;
 }
 
+.ol-on {
+    outline: 1px solid red;
+}
+
 .rounded-med {
     border-radius: 20px;
 }
@@ -100,10 +104,6 @@
 
 .justify-space-between {
     justify-content: space-between;
-}
-
-.align-center {
-    align-items: center;
 }
 
 .justify-center {

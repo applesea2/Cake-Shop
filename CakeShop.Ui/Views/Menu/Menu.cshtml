@@ -6,28 +6,130 @@
 }
 
 @section Stylesheets {
-    <link rel="stylesheet" href="~/css/bootstrapped/menu.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/menu-components.css" asp-append-version="true"/>
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="menu-container">
-    <table class="menu-table">
-        <thead>
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="category">
-            <td colspan="2">Specialty Cakes</td>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr class="item">
-                <td>@item.Title</td>
-                <td>@(item.Price.Value.ToString("C") ?? "$0.00")</td>
-            </tr>
-        }
-    </table>
+<div class="menu-wrapper">
+    <div class="filter-wrapper ol-on">
+        <h1>@ViewData["Title"]</h1>
+        
+        <section class="filter">
+            <h2 class="filter__heading">filter by type:</h2>
+            
+            <div class="filter__list ol-on">
+                <button>
+                    all
+                </button>
+                <button>
+                    nut-free
+                </button>
+                <button>
+                    dairy-free
+                </button>
+                <button>
+                    gluten-free
+                </button>
+                <button>
+                    cupcake
+                </button>
+                <button>
+                    wedding cake
+                </button>
+                <button>
+                    birthday cake
+                </button>
+                <button>
+                    custom cake
+                </button>
+                <button>
+                    fruitcake
+                </button>
+                                <button>
+                    wedding cake
+                </button>
+                <button>
+                    birthday cake
+                </button>
+                <button>
+                    custom cake
+                </button>
+                <button>
+                    fruitcake
+                </button>
+                                <button>
+                    wedding cake
+                </button>
+                <button>
+                    birthday cake
+                </button>
+                <button>
+                    custom cake
+                </button>
+                <button>
+                    fruitcake
+                </button>
+                                <button>
+                    wedding cake
+                </button>
+                <button>
+                    birthday cake
+                </button>
+                <button>
+                    custom cake
+                </button>
+                <button>
+                    fruitcake
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <div class="cake-list ol-on">
+        
+        <article class="cake-card">
+            <!-- add dpi responsive images perhaps -->
+            <img src="~/assets/images/cupcakes-stock-photo.jpg"
+                 alt="Light blue frosted vanilla cupcakes with sprinkles around the outer sides atop a pink background"
+                 asp-append-version="true"
+                 class="cake-card__photo"/>
+            
+            <div class="details">
+                <div class="details__top-row">
+                    <h2 class="details__text">
+                        Vanilla Cupcakes
+                    </h2>
+                    <p class="details__text">
+                        $12
+                    </p>
+                </div>
+                
+                <div class="details__bottom-row">
+                    @* semantic / accessibility *@
+                    <img src="~/assets/images/egg-icon.png"
+                         alt="White line-art of a cracked egg"
+                         asp-append-version="true"
+                         class="details__allergen-icon"/>
+                    <img src="~/assets/images/peanut-icon.png"
+                         alt="White line-art of a peanut"
+                         asp-append-version="true"
+                         class="details__allergen-icon"/>
+                    <img src="~/assets/images/milk-icon.png"
+                         alt="White line-art of a milk carton"
+                         asp-append-version="true"
+                         class="details__allergen-icon"/>
+                    <img src="~/assets/images/wheat-icon.png"
+                         alt="White line-art of a wheat head"
+                         asp-append-version="true"
+                         class="details__allergen-icon"/>
+
+                    <p class="details__text details__text--med">
+                        <!-- turn arrow into pseudo-element -->
+                        see details <span class="icon icon--arrow">➜</span>
+                    </p>
+                </div>
+
+            </div>
+        </article>
+
+    </div>
 </div>

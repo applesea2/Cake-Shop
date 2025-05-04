@@ -1,0 +1,33 @@
+﻿@model List<MenuModel>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Menu";
+}
+
+@section Stylesheets {
+    <link rel="stylesheet" href="~/css/bootstrapped/menu.css" asp-append-version="true"/>
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="menu-container">
+    <table class="menu-table">
+        <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="category">
+            <td colspan="2">Specialty Cakes</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr class="item">
+                <td>@item.Title</td>
+                <td>@(item.Price.Value.ToString("C") ?? "$0.00")</td>
+            </tr>
+        }
+    </table>
+</div>
