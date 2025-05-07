@@ -15,25 +15,13 @@
     
     .filter__list {
         display: flex;
+        /* if there's available space for lines, don't stretch by default and cause a gap. */
+        /* comes into effect if we want to make the filter__list have a greater height than the total flex items height/gap. */
+        align-content: flex-start;
         flex-wrap: wrap;
         gap: .2rem;
         width: 30rem;
-
-
-        /* first 4 buttons */
-
-        .btn--filter:nth-child(-1n+4) {
-            /* set all to take up 1/4th of available space, minus the gap between elements */
-            /* 3 gaps between the 4 buttons. .2rem * 4 = .6rem in total. .6rem / 4 buttons gives us the amount to take from
-              each button's width which will account for the gap between them and not overflow buttons onto the next line
-              due to 100%/4 and gap present. */
-            flex-basis: calc((100% / 4) - 0.15rem);
-        }
-
-        .btn--filter:nth-child(1n+5) {
-            flex-grow: 1;
-        }
-
+        
         .btn--filter {
             /* https://stackoverflow.com/a/40069280/12637568 */
             --border-width: 3px;
@@ -62,11 +50,25 @@
                 border-color: var(--background-hover-color);
             }
 
-            &:active, &.active {
+            &.toggled {
                 color: #7B2D39;
                 background: #E4C6C6;
                 border: var(--border-width) dashed #7B2D39;
             }
+        }
+        
+        /* first 4 buttons */
+        .btn--filter:nth-child(-1n+4) {
+            /* set all to take up 1/4th of available space, minus the gap between elements */
+            /* 3 gaps between the 4 buttons. .2rem * 4 = .6rem in total. .6rem / 4 buttons gives us the amount to take from
+              each button's width which will account for the gap between them and not overflow buttons onto the next line
+              due to 100%/4 and gap present. */
+            flex-basis: calc((100% / 4) - 0.15rem);
+        }
+
+        /* buttons after button #4 */
+        .btn--filter:nth-child(1n+5) {
+            flex-grow: 1;
         }
 
     }
@@ -84,8 +86,8 @@
     
     .cake-card {
         position: relative;
-        /*outline: 1px solid red;*/
         
+        /* when card hovered, show details: */
         &:hover {
             .details {
                 opacity: 100%;

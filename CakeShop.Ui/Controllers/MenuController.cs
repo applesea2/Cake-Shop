@@ -18,9 +18,8 @@ public class MenuController : Controller
 
     public IActionResult Menu()
     {
-        // var menuDto = _menuService.GetMenuItems();
-        // var viewModel = _mapper.Map<List<MenuModel>>(menuDto);
-        // return View(viewModel);
-        return View();
+        var menuDto = _menuService.GetMenuItems();
+        var viewModel = _mapper.Map<List<MenuModel>>(menuDto);
+        return View(viewModel);
     }
 }
