@@ -1,7 +1,8 @@
 .menu-wrapper {
     display: flex;
     justify-content: center;
-    outline: 2px solid blue;
+    padding: .6rem 1.2rem;
+    gap: 1.2rem;
 }
 
 .filter-wrapper {
@@ -21,7 +22,7 @@
 
         /* first 4 buttons */
 
-        button:nth-child(-1n+4) {
+        .btn--filter:nth-child(-1n+4) {
             /* set all to take up 1/4th of available space, minus the gap between elements */
             /* 3 gaps between the 4 buttons. .2rem * 4 = .6rem in total. .6rem / 4 buttons gives us the amount to take from
               each button's width which will account for the gap between them and not overflow buttons onto the next line
@@ -29,16 +30,21 @@
             flex-basis: calc((100% / 4) - 0.15rem);
         }
 
-        button:nth-child(1n+5) {
+        .btn--filter:nth-child(1n+5) {
             flex-grow: 1;
         }
 
-        button {
+        .btn--filter {
             /* https://stackoverflow.com/a/40069280/12637568 */
             --border-width: 3px;
+            --background-color: #F7DFDF;
+            --background-hover-color: #e8d0d0;
+            
             border:none;
-            border: var(--border-width) dashed #F7DFDF;
-            background: #F7DFDF;
+            border-radius: 2px;
+            height: 2.1em; /* activate border-box calculated border via fixed-height */
+            border: var(--border-width) dashed var(--background-color);
+            background: var(--background-color);
 
             color: #F7566D;
             font-weight: bold;
@@ -49,10 +55,11 @@
 
             cursor: pointer;
 
-            transition: .5s background, 1s color, 1s border;
+            transition: 1s background, 1s color, 1s border;
 
             &:hover {
-                background: #e8d0d0;
+                background: var(--background-hover-color);
+                border-color: var(--background-hover-color);
             }
 
             &:active, &.active {
@@ -68,9 +75,22 @@
 
 
 .cake-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem .8rem;
     /* idea for a css ide tool: suggestions for nested css classnames based on nested classes in html file */
+    align-items: flex-start;
+    
     .cake-card {
         position: relative;
+        /*outline: 1px solid red;*/
+        
+        &:hover {
+            .details {
+                opacity: 100%;
+            }
+        }
         
         .cake-card__photo {
             border-radius: 9px;
@@ -79,28 +99,29 @@
             object-fit: cover;
             
             box-sizing: border-box;
-            border-image-source: linear-gradient(to bottom, rgb(233, 63, 88, .25) 0%, rgb(185, 74, 90, .25) 58%, rgb(236, 116, 188, .25) 100%);
+            border-image: linear-gradient(to bottom, rgb(233, 63, 88, .25) 0%, rgb(185, 74, 90, .25) 58%, rgb(236, 116, 188, .25) 100%);
         }
         
         .details {
             position: absolute;
-            top: 50%;
+            bottom: 3.063rem; /* almost mid-way */
             width: 100%;
+            
+            opacity: 0;
+            transition: .4s opacity ease;
+            
+            *::selection {
+                background-color: rgba(225, 223, 223, 0.2);
+            }
             
             padding: 1.1rem 0.5rem 0.6rem 0.5rem;
             background-color: rgb(50, 48, 49, .62);
             border-radius: 3px;
             
-            .details__top-row {
+            .details__row {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-            }
-            .details__bottom-row {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                
             }
             
             .details__allergen-icon {
@@ -120,8 +141,13 @@
                 font-size: 20px;
             }
             
-            .icon--arrow {
-                font-size: 20px;
+            .icon--arrow::after {
+                content: "➜";
+                display: inline;
+                font-family: "Arima";
+                color: white;
+                width: 1em;
+                height: 1em;
             }
         }
     }
