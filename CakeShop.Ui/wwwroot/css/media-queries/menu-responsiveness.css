@@ -1,0 +1,26 @@
+﻿@media screen and (max-width: 70em) {
+    .menu-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 38.375em) {
+    .filter-wrapper .filter__list {
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 90vw;
+        height: 12rem;
+        outline: 2px solid rgb(253,136,153);
+        border-radius: 6px;
+        gap: .15rem;
+   
+        scrollbar-color: #F7566D #f1adb9;
+        overflow: scroll;
+        
+        .btn.btn--filter:nth-child(1n) {
+            flex-basis: calc((100% / 2) - 0.15rem); /* account for gap in width calculation. note: grid solves this via fr! :D */ 
+        }
+    }
+}

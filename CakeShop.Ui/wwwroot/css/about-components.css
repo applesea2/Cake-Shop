@@ -1,0 +1,44 @@
+﻿.about {
+    width: 100vw;
+}
+
+.about__section {
+    display: flex;
+    justify-content: space-around;
+    gap: .75rem;
+    padding: 0 2rem;
+}
+
+.about__heading1 {
+    margin-left: 4.875rem;
+}
+
+.about__text,
+.credits__text {
+    font-size: 1.625rem;
+    width: 50vw;
+}
+
+.about__text {
+    text-indent: 3em;
+}
+
+.about__img {
+    width: 20rem;
+}
+
+.about__link {
+    text-decoration-thickness: 2px;
+}
+
+.about__credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.icon-section .icon-section__icon {
+    width: 3rem;
+}

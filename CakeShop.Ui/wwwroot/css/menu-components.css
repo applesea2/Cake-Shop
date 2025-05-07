@@ -1,0 +1,157 @@
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: .6rem 1.2rem;
+    gap: 1.2rem;
+}
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    .filter__heading {
+        font-size: 1.25rem;
+    }
+    
+    .filter__list {
+        display: flex;
+        /* if there's available space for lines, don't stretch by default and cause a gap. */
+        /* comes into effect if we want to make the filter__list have a greater height than the total flex items height/gap. */
+        align-content: flex-start;
+        flex-wrap: wrap;
+        gap: .2rem;
+        width: 30rem;
+        
+        .btn--filter {
+            /* https://stackoverflow.com/a/40069280/12637568 */
+            --border-width: 3px;
+            --background-color: #F7DFDF;
+            --background-hover-color: #e8d0d0;
+            
+            border:none;
+            border-radius: 2px;
+            height: 2.1em; /* activate border-box calculated border via fixed-height */
+            border: var(--border-width) dashed var(--background-color);
+            background: var(--background-color);
+
+            color: #F7566D;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1;
+            font-family: "Arima", Arial, sans-serif;
+            padding: calc(.6rem - var(--border-width)) calc(.7rem - var(--border-width));
+
+            cursor: pointer;
+
+            transition: 1s background, 1s color, 1s border;
+
+            &:hover {
+                background: var(--background-hover-color);
+                border-color: var(--background-hover-color);
+            }
+
+            &.toggled {
+                color: #7B2D39;
+                background: #E4C6C6;
+                border: var(--border-width) dashed #7B2D39;
+            }
+        }
+        
+        /* first 4 buttons */
+        .btn--filter:nth-child(-1n+4) {
+            /* set all to take up 1/4th of available space, minus the gap between elements */
+            /* 3 gaps between the 4 buttons. .2rem * 4 = .6rem in total. .6rem / 4 buttons gives us the amount to take from
+              each button's width which will account for the gap between them and not overflow buttons onto the next line
+              due to 100%/4 and gap present. */
+            flex-basis: calc((100% / 4) - 0.15rem);
+        }
+
+        /* buttons after button #4 */
+        .btn--filter:nth-child(1n+5) {
+            flex-grow: 1;
+        }
+
+    }
+    
+}
+
+
+.cake-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem .8rem;
+    /* idea for a css ide tool: suggestions for nested css classnames based on nested classes in html file */
+    align-items: flex-start;
+    
+    .cake-card {
+        position: relative;
+        
+        /* when card hovered, show details: */
+        &:hover {
+            .details {
+                opacity: 100%;
+            }
+        }
+        
+        .cake-card__photo {
+            border-radius: 9px;
+            width: 16.875rem;
+            height: 19rem;
+            object-fit: cover;
+            
+            box-sizing: border-box;
+            border-image: linear-gradient(to bottom, rgb(233, 63, 88, .25) 0%, rgb(185, 74, 90, .25) 58%, rgb(236, 116, 188, .25) 100%);
+        }
+        
+        .details {
+            position: absolute;
+            bottom: 3.063rem; /* almost mid-way */
+            width: 100%;
+            
+            opacity: 0;
+            transition: .4s opacity ease;
+            
+            *::selection {
+                background-color: rgba(225, 223, 223, 0.2);
+            }
+            
+            padding: 1.1rem 0.5rem 0.6rem 0.5rem;
+            background-color: rgb(50, 48, 49, .62);
+            border-radius: 3px;
+            
+            .details__row {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            
+            .details__allergen-icon {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .details__text {
+                font-family: "Arima";
+                color: white;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                filter: drop-shadow(0 2px rgb(0,0,0,.25));
+            } 
+            
+            .details__text--med {
+                font-size: 20px;
+            }
+            
+            .icon--arrow::after {
+                content: "➜";
+                display: inline;
+                font-family: "Arima";
+                color: white;
+                width: 1em;
+                height: 1em;
+            }
+        }
+    }
+}
+

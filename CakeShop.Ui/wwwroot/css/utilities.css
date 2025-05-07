@@ -2,7 +2,19 @@
     display: none;
 }
 
+.ol-on {
+    outline: 1px solid red;
+}
+
+.rounded-med {
+    border-radius: 20px;
+}
+
 /* Typography utilities */
+
+.nowrap {
+    white-space: nowrap;
+}
 
 .text-center {
     text-align: center;
@@ -92,10 +104,6 @@
 
 .justify-space-between {
     justify-content: space-between;
-}
-
-.align-center {
-    align-items: center;
 }
 
 .justify-center {

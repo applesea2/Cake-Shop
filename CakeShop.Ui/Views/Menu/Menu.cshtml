@@ -6,28 +6,280 @@
 }
 
 @section Stylesheets {
-    <link rel="stylesheet" href="~/css/bootstrapped/menu.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/menu-components.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/media-queries/menu-responsiveness.css" asp-append-version="true"/>
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="menu-container">
-    <table class="menu-table">
-        <thead>
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="category">
-            <td colspan="2">Specialty Cakes</td>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr class="item">
-                <td>@item.Title</td>
-                <td>@(item.Price.Value.ToString("C") ?? "$0.00")</td>
-            </tr>
-        }
-    </table>
+<div class="menu-wrapper">
+    <section class="filter-wrapper">
+        <h1>@ViewData["Title"]</h1>
+        
+        <section class="filter">
+            <h2 class="filter__heading">filter by type:</h2>
+            
+            <div class="filter__list">
+                <button class="btn btn--filter">
+                    all
+                </button>
+                <button class="btn btn--filter">
+                    nut-free
+                </button>
+                <button class="btn btn--filter">
+                    dairy-free
+                </button>
+                <button class="btn btn--filter">
+                    gluten-free
+                </button>
+                <button class="btn btn--filter">
+                    fruitcake
+                </button>
+                <button class="btn btn--filter">
+                    wedding cake
+                </button>
+                <button class="btn btn--filter">
+                    birthday cake
+                </button>
+                <button class="btn btn--filter">
+                    custom cake
+                </button>
+                <button class="btn btn--filter">
+                    fruitcake
+                </button>
+                <button class="btn btn--filter">
+                    wedding cake
+                </button>
+                <button class="btn btn--filter">
+                    birthday cake
+                </button>
+                <button class="btn btn--filter">
+                    custom cake
+                </button>
+                <button class="btn btn--filter">
+                    fruitcake
+                </button>
+                <button class="btn btn--filter">
+                    wedding cake
+                </button>
+                <button class="btn btn--filter">
+                    birthday cake
+                </button>
+                <button class="btn btn--filter">
+                    custom cake
+                </button>
+                <button class="btn btn--filter">
+                    fruitcake
+                </button>
+                <button class="btn btn--filter">
+                    wedding cake
+                </button>
+                <button class="btn btn--filter">
+                    birthday cake
+                </button>
+                <button class="btn btn--filter">
+                    custom cake
+                </button>
+                <button class="btn btn--filter">
+                    fruitcake
+                </button>
+            </div>
+        </section>
+    </section>
+
+    <div class="cake-list">
+        
+        <div class="cake-card">
+            <a href="#">
+                <!-- add dpi responsive images -->
+                <img src="~/assets/images/cupcakes-stock-photo.jpg"
+                     alt="Light blue frosted vanilla cupcakes with sprinkles around the outer sides atop a pink background"
+                     asp-append-version="true"
+                     class="cake-card__photo"/>
+
+                <div class="details">
+                    <section class="details__row">
+                        <h2 class="details__text">
+                            Vanilla Cupcakes
+                        </h2>
+                        <p class="details__text">
+                            $12
+                        </p>
+                    </section>
+
+                    <div class="details__row">
+                        <img src="~/assets/images/egg-icon.png"
+                             alt="White line-art of a cracked egg"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/peanut-icon.png"
+                             alt="White line-art of a peanut"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/milk-icon.png"
+                             alt="White line-art of a milk carton"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/wheat-icon.png"
+                             alt="White line-art of a wheat head"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+
+                        <p class="details__text details__text--med">
+                            <!-- turn arrow into pseudo-element -->
+                            see details <span class="icon icon--arrow"></span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <div class="cake-card">
+            <a href="#">
+                <!-- add dpi responsive images -->
+                <img src="~/assets/images/cupcakes-stock-photo.jpg"
+                     alt="Light blue frosted vanilla cupcakes with sprinkles around the outer sides atop a pink background"
+                     asp-append-version="true"
+                     class="cake-card__photo"/>
+
+                <div class="details">
+                    <section class="details__row">
+                        <h2 class="details__text">
+                            Vanilla Cupcakes
+                        </h2>
+                        <p class="details__text">
+                            $12
+                        </p>
+                    </section>
+
+                    <div class="details__row">
+                        <img src="~/assets/images/egg-icon.png"
+                             alt="White line-art of a cracked egg"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/peanut-icon.png"
+                             alt="White line-art of a peanut"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/milk-icon.png"
+                             alt="White line-art of a milk carton"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/wheat-icon.png"
+                             alt="White line-art of a wheat head"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+
+                        <p class="details__text details__text--med">
+                            <!-- turn arrow into pseudo-element -->
+                            see details <span class="icon icon--arrow"></span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <div class="cake-card">
+            <a href="#">
+                <!-- add dpi responsive images -->
+                <img src="~/assets/images/cupcakes-stock-photo.jpg"
+                     alt="Light blue frosted vanilla cupcakes with sprinkles around the outer sides atop a pink background"
+                     asp-append-version="true"
+                     class="cake-card__photo"/>
+
+                <div class="details">
+                    <section class="details__row">
+                        <h2 class="details__text">
+                            Vanilla Cupcakes
+                        </h2>
+                        <p class="details__text">
+                            $12
+                        </p>
+                    </section>
+
+                    <div class="details__row">
+                        <img src="~/assets/images/egg-icon.png"
+                             alt="White line-art of a cracked egg"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/peanut-icon.png"
+                             alt="White line-art of a peanut"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/milk-icon.png"
+                             alt="White line-art of a milk carton"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/wheat-icon.png"
+                             alt="White line-art of a wheat head"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+
+                        <p class="details__text details__text--med">
+                            <!-- turn arrow into pseudo-element -->
+                            see details <span class="icon icon--arrow"></span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+                <div class="cake-card">
+            <a href="#">
+                <!-- add dpi responsive images -->
+                <img src="~/assets/images/cupcakes-stock-photo.jpg"
+                     alt="Light blue frosted vanilla cupcakes with sprinkles around the outer sides atop a pink background"
+                     asp-append-version="true"
+                     class="cake-card__photo"/>
+
+                <div class="details">
+                    <section class="details__row">
+                        <h2 class="details__text">
+                            Vanilla Cupcakes
+                        </h2>
+                        <p class="details__text">
+                            $12
+                        </p>
+                    </section>
+
+                    <div class="details__row">
+                        <img src="~/assets/images/egg-icon.png"
+                             alt="White line-art of a cracked egg"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/peanut-icon.png"
+                             alt="White line-art of a peanut"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/milk-icon.png"
+                             alt="White line-art of a milk carton"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+                        <img src="~/assets/images/wheat-icon.png"
+                             alt="White line-art of a wheat head"
+                             asp-append-version="true"
+                             class="details__allergen-icon"/>
+
+                        <p class="details__text details__text--med">
+                            <!-- turn arrow into pseudo-element -->
+                            see details <span class="icon icon--arrow"></span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
 </div>
+
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const filterButtons = document.getElementsByClassName('btn--filter');
+            for (const button of filterButtons) {
+                button.addEventListener('click', function() {
+                    button.classList.toggle('toggled');
+                });
+            }
+        });
+    </script>
+}

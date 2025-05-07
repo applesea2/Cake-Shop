@@ -2,7 +2,7 @@
 /* Base media queries, descending in screen width */
 
 @media screen and (max-width: 75.25em) {
-    main {
+    .main-content-wrapper {
         flex-direction: column;
     }
     
@@ -43,7 +43,7 @@
 }
 
 @media screen and (max-width: 36.375em) {
-    main {
+    .main-content-wrapper {
         padding: 0 3rem;
     }
     h1 {
@@ -52,7 +52,11 @@
 }
 
 @media screen and (max-width: 30em) {
-    main {
+    ul.navbar {
+        padding: 4rem 0;
+    }
+    
+    .main-content-wrapper {
         padding: 0 3rem;
     }
     h1 {

@@ -120,7 +120,7 @@ User agent overrides
 ==========*/
 
 *::selection {
-    background-color: #f7a5b045;    
+    background-color: rgb(247, 165, 176, .27);
 }
 
 h1 {

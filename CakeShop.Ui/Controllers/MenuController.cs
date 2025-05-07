@@ -20,7 +20,6 @@ public class MenuController : Controller
     {
         var menuDto = _menuService.GetMenuItems();
         var viewModel = _mapper.Map<List<MenuModel>>(menuDto);
-        
         return View(viewModel);
     }
 }
