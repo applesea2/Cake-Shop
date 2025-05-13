@@ -8,6 +8,6 @@ public class UiMappingProfile : Profile
 {
     public UiMappingProfile()
     {
-        CreateMap<MenuItemDTO, MenuModel>();
+        CreateMap<Item, MenuModel>();
     }
 }

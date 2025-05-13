@@ -1,13 +1,13 @@
-﻿using CakeShop.DAL.Context;
-using CakeShop.DAL.Entities;
+﻿using Cakeshop.Domain.Entities;
+using CakeShop.Persistance.Context;
 
-namespace CakeShop.DAL.Repositories;
+namespace CakeShop.Persistance.Repositories;
 
 public class MenuRepository : IMenuRepository
 {
-    private readonly MyDbContext _db;
+    private readonly ApplicationContext _db;
 
-    public MenuRepository(MyDbContext db)
+    public MenuRepository(ApplicationContext db)
     {
         _db = db;
     }

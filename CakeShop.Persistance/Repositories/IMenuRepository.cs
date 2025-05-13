@@ -1,6 +1,6 @@
-﻿using CakeShop.DAL.Entities;
+﻿using Cakeshop.Domain.Entities;
 
-namespace CakeShop.DAL.Repositories;
+namespace CakeShop.Persistance.Repositories;
 
 public interface IMenuRepository
 {

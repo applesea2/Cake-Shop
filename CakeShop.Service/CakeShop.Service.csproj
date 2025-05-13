@@ -13,7 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Cakeshop.DTO\Cakeshop.DTO.csproj" />
-      <ProjectReference Include="..\CakeShop.Persistance\CakeShop.DAL.csproj" />
+      <ProjectReference Include="..\CakeShop.Persistance\CakeShop.Persistance.csproj" />
     </ItemGroup>
 
 </Project>

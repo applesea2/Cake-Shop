@@ -1,6 +1,6 @@
 using System.ComponentModel.Design;
-using CakeShop.DAL.Context;
-using CakeShop.DAL.Repositories;
+using CakeShop.Persistance.Context;
+using CakeShop.Persistance.Repositories;
 using CakeShop.Service;
 using CakeShop.Service.MappingProfiles;
 using CakeShop.Ui.MappingProfiles;
@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer((builder.Configuration.GetConnectionString("MenuDatabase"))));
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer((builder.Configuration.GetConnectionString("CakeShop"))));
 
 builder.Services.AddAutoMapper(typeof(AutomapProfile), typeof(UiMappingProfile));
 

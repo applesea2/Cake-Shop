@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using CakeShop.DAL.Repositories;
 using Cakeshop.DTO;
+using CakeShop.Persistance.Repositories;
 
 namespace CakeShop.Service;
 
@@ -15,15 +15,15 @@ public class MenuService : IMenuService
         _mapper = mapper;
     }
 
-    public List<MenuItemDTO?> GetMenuItems()
+    public List<Item?> GetMenuItems()
     {
         var items = _menuRepository.GetListOfItems().ToList();
-        return _mapper.Map<List<MenuItemDTO?>>(items);
+        return _mapper.Map<List<Item?>>(items);
     }
 
-    public MenuItemDTO? GetMenuItemById(int id)
+    public Item? GetMenuItemById(int id)
     {
         var item = _menuRepository.GetItemById(id);
-        return _mapper.Map<MenuItemDTO?>(item);
+        return _mapper.Map<Item?>(item);
     }
 }

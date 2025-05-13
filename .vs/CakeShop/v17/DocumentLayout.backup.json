@@ -1,7 +1,84 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\stros\\source\\repos\\applesea2\\Cake-Shop\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\stros\\RiderProjects\\CakeShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D9BB3668-740A-499E-85BC-52DDEAA6DD09}|CakeShop.Persistance\\CakeShop.Persistance.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.persistance\\repositories\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9BB3668-740A-499E-85BC-52DDEAA6DD09}|CakeShop.Persistance\\CakeShop.Persistance.csproj|solutionrelative:cakeshop.persistance\\repositories\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|solutionrelative:cakeshop.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9BB3668-740A-499E-85BC-52DDEAA6DD09}|CakeShop.Persistance\\CakeShop.Persistance.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.persistance\\context\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9BB3668-740A-499E-85BC-52DDEAA6DD09}|CakeShop.Persistance\\CakeShop.Persistance.csproj|solutionrelative:cakeshop.persistance\\context\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89FB930E-8C7D-4535-837D-18F8E625D204}|CakeShop.Service\\CakeShop.Service.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.service\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89FB930E-8C7D-4535-837D-18F8E625D204}|CakeShop.Service\\CakeShop.Service.csproj|solutionrelative:cakeshop.service\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|solutionrelative:cakeshop.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89FB930E-8C7D-4535-837D-18F8E625D204}|CakeShop.Service\\CakeShop.Service.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.service\\mappingprofiles\\automapprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89FB930E-8C7D-4535-837D-18F8E625D204}|CakeShop.Service\\CakeShop.Service.csproj|solutionrelative:cakeshop.service\\mappingprofiles\\automapprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C709BD20-4F33-4B71-B1F4-A28D455B1ED6}|CakeShop.Domain\\CakeShop.Domain.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C709BD20-4F33-4B71-B1F4-A28D455B1ED6}|CakeShop.Domain\\CakeShop.Domain.csproj|solutionrelative:cakeshop.domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C709BD20-4F33-4B71-B1F4-A28D455B1ED6}|CakeShop.Domain\\CakeShop.Domain.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.domain\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C709BD20-4F33-4B71-B1F4-A28D455B1ED6}|CakeShop.Domain\\CakeShop.Domain.csproj|solutionrelative:cakeshop.domain\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}|Cakeshop.DTO\\Cakeshop.DTO.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.dto\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}|Cakeshop.DTO\\Cakeshop.DTO.csproj|solutionrelative:cakeshop.dto\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.ui\\models\\contactusmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|solutionrelative:cakeshop.ui\\models\\contactusmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.ui\\models\\aboutusmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|solutionrelative:cakeshop.ui\\models\\aboutusmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89FB930E-8C7D-4535-837D-18F8E625D204}|CakeShop.Service\\CakeShop.Service.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.service\\contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89FB930E-8C7D-4535-837D-18F8E625D204}|CakeShop.Service\\CakeShop.Service.csproj|solutionrelative:cakeshop.service\\contactus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.ui\\models\\menumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|solutionrelative:cakeshop.ui\\models\\menumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}|Cakeshop.DTO\\Cakeshop.DTO.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.dto\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26D139E1-7DB8-4F3D-96D6-F9505CC75FD5}|Cakeshop.DTO\\Cakeshop.DTO.csproj|solutionrelative:cakeshop.dto\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9BB3668-740A-499E-85BC-52DDEAA6DD09}|CakeShop.Persistance\\CakeShop.Persistance.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.persistance\\cakeshop.persistance.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D9BB3668-740A-499E-85BC-52DDEAA6DD09}|CakeShop.Persistance\\CakeShop.Persistance.csproj|solutionrelative:cakeshop.persistance\\cakeshop.persistance.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Migrations\\20250510190412_Ingredients-Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CakeShop.Persistance\\Migrations\\20250510190412_Ingredients-Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Migrations\\20250510185733_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CakeShop.Persistance\\Migrations\\20250510185733_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.ui\\menuviewmodelmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|solutionrelative:cakeshop.ui\\menuviewmodelmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|c:\\users\\stros\\riderprojects\\cakeshop\\cakeshop.ui\\app_code\\shared.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54E51DB1-02F0-48EC-B87B-F8A0E760C9CE}|CakeShop.Ui\\CakeShop.Ui.csproj|solutionrelative:cakeshop.ui\\app_code\\shared.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -17,11 +94,250 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuRepository.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Repositories\\MenuRepository.cs",
+              "RelativeDocumentMoniker": "CakeShop.Persistance\\Repositories\\MenuRepository.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Repositories\\MenuRepository.cs",
+              "RelativeToolTip": "CakeShop.Persistance\\Repositories\\MenuRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:45:12.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuService.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Service\\MenuService.cs",
+              "RelativeDocumentMoniker": "CakeShop.Service\\MenuService.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Service\\MenuService.cs",
+              "RelativeToolTip": "CakeShop.Service\\MenuService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:42:21.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Program.cs",
+              "RelativeDocumentMoniker": "CakeShop.Ui\\Program.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Program.cs",
+              "RelativeToolTip": "CakeShop.Ui\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:39:02.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\appsettings.json",
+              "RelativeDocumentMoniker": "CakeShop.Ui\\appsettings.json",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\appsettings.json",
+              "RelativeToolTip": "CakeShop.Ui\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-10T18:50:40.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AutomapProfile.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Service\\MappingProfiles\\AutomapProfile.cs",
+              "RelativeDocumentMoniker": "CakeShop.Service\\MappingProfiles\\AutomapProfile.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Service\\MappingProfiles\\AutomapProfile.cs",
+              "RelativeToolTip": "CakeShop.Service\\MappingProfiles\\AutomapProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:41:56.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Domain\\Entities\\Ingredient.cs",
+              "RelativeDocumentMoniker": "CakeShop.Domain\\Entities\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Domain\\Entities\\Ingredient.cs",
+              "RelativeToolTip": "CakeShop.Domain\\Entities\\Ingredient.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:10:38.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Domain\\Entities\\Item.cs",
+              "RelativeDocumentMoniker": "CakeShop.Domain\\Entities\\Item.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Domain\\Entities\\Item.cs",
+              "RelativeToolTip": "CakeShop.Domain\\Entities\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:09:05.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Context\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "CakeShop.Persistance\\Context\\ApplicationContext.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Context\\ApplicationContext.cs",
+              "RelativeToolTip": "CakeShop.Persistance\\Context\\ApplicationContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBkAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:00:59.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\Cakeshop.DTO\\Ingredient.cs",
+              "RelativeDocumentMoniker": "Cakeshop.DTO\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\Cakeshop.DTO\\Ingredient.cs",
+              "RelativeToolTip": "Cakeshop.DTO\\Ingredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:45:25.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ContactUsModel.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Models\\ContactUsModel.cs",
+              "RelativeDocumentMoniker": "CakeShop.Ui\\Models\\ContactUsModel.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Models\\ContactUsModel.cs",
+              "RelativeToolTip": "CakeShop.Ui\\Models\\ContactUsModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:17:45.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AboutUsModel.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Models\\AboutUsModel.cs",
+              "RelativeDocumentMoniker": "CakeShop.Ui\\Models\\AboutUsModel.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Models\\AboutUsModel.cs",
+              "RelativeToolTip": "CakeShop.Ui\\Models\\AboutUsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:17:43.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ContactUs.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Service\\ContactUs.cs",
+              "RelativeDocumentMoniker": "CakeShop.Service\\ContactUs.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Service\\ContactUs.cs",
+              "RelativeToolTip": "CakeShop.Service\\ContactUs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:31:11.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MenuModel.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Models\\MenuModel.cs",
+              "RelativeDocumentMoniker": "CakeShop.Ui\\Models\\MenuModel.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\Models\\MenuModel.cs",
+              "RelativeToolTip": "CakeShop.Ui\\Models\\MenuModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:18:27.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CakeShop.Persistance",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\CakeShop.Persistance.csproj",
+              "RelativeDocumentMoniker": "CakeShop.Persistance\\CakeShop.Persistance.csproj",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\CakeShop.Persistance.csproj",
+              "RelativeToolTip": "CakeShop.Persistance\\CakeShop.Persistance.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-13T13:59:44.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\Cakeshop.DTO\\Item.cs",
+              "RelativeDocumentMoniker": "Cakeshop.DTO\\Item.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\Cakeshop.DTO\\Item.cs",
+              "RelativeToolTip": "Cakeshop.DTO\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:41:22.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250510190412_Ingredients-Migration.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Migrations\\20250510190412_Ingredients-Migration.cs",
+              "RelativeDocumentMoniker": "CakeShop.Persistance\\Migrations\\20250510190412_Ingredients-Migration.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Migrations\\20250510190412_Ingredients-Migration.cs",
+              "RelativeToolTip": "CakeShop.Persistance\\Migrations\\20250510190412_Ingredients-Migration.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:04:13.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20250510185733_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Migrations\\20250510185733_InitialCreate.cs",
+              "RelativeDocumentMoniker": "CakeShop.Persistance\\Migrations\\20250510185733_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Persistance\\Migrations\\20250510185733_InitialCreate.cs",
+              "RelativeToolTip": "CakeShop.Persistance\\Migrations\\20250510185733_InitialCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:57:33.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MenuViewModelMap.cs",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\MenuViewModelMap.cs",
+              "RelativeDocumentMoniker": "CakeShop.Ui\\MenuViewModelMap.cs",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\MenuViewModelMap.cs",
+              "RelativeToolTip": "CakeShop.Ui\\MenuViewModelMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:48:28.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Shared.cshtml",
+              "DocumentMoniker": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\App_Code\\Shared.cshtml",
+              "RelativeDocumentMoniker": "CakeShop.Ui\\App_Code\\Shared.cshtml",
+              "ToolTip": "C:\\Users\\stros\\RiderProjects\\CakeShop\\CakeShop.Ui\\App_Code\\Shared.cshtml",
+              "RelativeToolTip": "CakeShop.Ui\\App_Code\\Shared.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-30T03:47:16.609Z",
+              "EditorCaption": ""
             }
           ]
         }

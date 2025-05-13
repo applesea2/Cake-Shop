@@ -8,6 +8,6 @@ public class MenuViewModelMap : Profile
 {
     public MenuViewModelMap()
     {
-        CreateMap<MenuItemDTO, MenuModel>();
+        CreateMap<Item, MenuModel>();
     }
 }
