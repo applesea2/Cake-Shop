@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/b12036fc-f73b-493c-9664-38e93f67544a)
+![firefox_8cLFGZ3d0l](https://github.com/user-attachments/assets/7a903887-1991-4da9-947b-825f5a71360c)
 
 # 🎂 Cake-Shop
 
