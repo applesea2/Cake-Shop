@@ -81,69 +81,68 @@
             </ul>
         </div>
         
-         <!-- Maps Widget Wrapper -->
-        <div class="pos-relative">
-            <figure class="maps-widget">
-                <!-- Future: replace with Google Maps iframe widget -->
-                <img
-                    class="maps-widget__photo"
-                    src="~/assets/images/google-maps.png"
-                    alt="A static image of a Google Maps illustrated 2D top-down street view."/>
+        <!-- Contact Form underneath Contact Us info list & the Google Map -->
+        <article>
+            <h2 class="contact-heading2">
+                Talk to us:
+            </h2>
+            <form method="POST" accept-charset="UTF-8" class="form form--contact-form">
+                <label asp-for="Name" class="form__label">
+                    Name
+                </label>
+                <input asp-for="Name" required type="text" class="form__input"/>
+                <p asp-validation-for="Name" class="color-danger"></p>
                 
-                <!-- If the screen-reader software implements this role value, read as a contiguous string of words.
-                     Otherwise, ignore, and there will be a slight pause between the two groups of words. -->
-                <figcaption role="text" class="maps-widget__caption">
-                    <span class="maps-widget__text maps-widget__text--small">
-                        view on
-                    </span>
-                    <span class="maps-widget__text maps-widget__text--med">
-                        Google Maps
-                    </span>
-                </figcaption>
-            </figure>
-        </div>
+                
+                <label asp-for="Email" class="form__label">
+                    Email
+                </label>
+                <input asp-for="Email" required type="email" class="form__input"/>
+                <p asp-validation-for="Email" class="color-danger"></p>
+                
+                
+                <label asp-for="Phone" class="form__label">
+                    Phone
+                </label>
+                <input asp-for="Phone" required type="tel" class="form__input"/>
+                <p asp-validation-for="Phone" class="color-danger"></p>
+                
+                <label asp-for="Comment" class="form__label">
+                    Comments/Questions
+                </label>
+                <textarea asp-for="Comment" required class="form__textarea"></textarea>
+                <p asp-validation-for="Comment" class="color-danger"></p>
+                
+                <input asp-action="OnSubmit"
+                       type="submit"
+                       value="Submit"
+                       class="btn btn--submit"/>
+            </form>
+        </article>
     </article>
     
-    <!-- Contact Form underneath Contact Us info list & the Google Map -->
-    <article>
-        <h2 class="contact-heading2">
-            Talk to us:
-        </h2>
-        <form method="POST" accept-charset="UTF-8" class="form form--contact-form">
-            <label asp-for="Name" class="form__label">
-                Name
-            </label>
-            <input asp-for="Name" required type="text" class="form__input"/>
-            <p asp-validation-for="Name" class="color-danger"></p>
-            
-            
-            <label asp-for="Email" class="form__label">
-                Email
-            </label>
-            <input asp-for="Email" required type="email" class="form__input"/>
-            <p asp-validation-for="Email" class="color-danger"></p>
-            
-            
-            <label asp-for="Phone" class="form__label">
-                Phone
-            </label>
-            <input asp-for="Phone" required type="tel" class="form__input"/>
-            <p asp-validation-for="Phone" class="color-danger"></p>
-            
-            <label asp-for="Comment" class="form__label">
-                Comments/Questions
-            </label>
-            <textarea asp-for="Comment" required class="form__textarea"></textarea>
-            <p asp-validation-for="Comment" class="color-danger"></p>
-            
-            <input asp-action="OnSubmit"
-                   type="submit"
-                   value="Submit"
-                   class="btn btn--submit"/>
-        </form>
-    </article>
-
-</div>
+         <!-- Maps Widget Wrapper -->
+         @* <div class=""> *@
+         @*     <figure class="maps-widget"> *@
+         @*         <!-- Future: replace with Google Maps iframe widget --> *@
+         @*         <img *@
+         @*             class="maps-widget__photo" *@
+         @*             src="~/assets/images/google-maps.png" *@
+         @*             alt="A static image of a Google Maps illustrated 2D top-down street view."/> *@
+         @*         *@
+         @*         <!-- If the screen-reader software implements this role value, read as a contiguous string of words. *@
+         @*         Otherwise, ignore, and there will be a slight pause between the two groups of words. --> *@
+         @*         <figcaption role="text" class="maps-widget__caption"> *@
+         @*             <span class="maps-widget__text maps-widget__text--small"> *@
+         @*                 view on *@
+         @*             </span> *@
+         @*             <span class="maps-widget__text maps-widget__text--med"> *@
+         @*                 Google Maps *@
+         @*             </span> *@
+         @*         </figcaption> *@
+         @*     </figure> *@
+         @* </div> *@
+ </div>
 
 
 @section Scripts {
