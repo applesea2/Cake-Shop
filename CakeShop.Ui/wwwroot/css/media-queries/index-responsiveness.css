@@ -3,6 +3,9 @@
 @media screen and (max-width: 75.25em) {
     div.photo-wrapper {
         position: static;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
