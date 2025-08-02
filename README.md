@@ -6,6 +6,10 @@ This is an MIT licensed cake store.
 
 It's built with N-Tier architecture.
 
+# 🔴 Status
+
+Currently offline as the shop owner is re-locating
+
 ## ⚠️ Usage Agreement:
 
 If you decide to host this repo or adapt it,
