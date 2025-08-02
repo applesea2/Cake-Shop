@@ -8,14 +8,14 @@ It's built with N-Tier architecture.
 
 # 🔴 Status
 
-Currently offline as the shop owner is re-locating
+Currently offline as the shop owner is re-locating.
 
 ## ⚠️ Usage Agreement:
 
 If you decide to host this repo or adapt it,
 please do not include original contact information (phone number, address, email, names) on the site.
 
-(we should probably take from environment variables to make this a non-issue)
+(We can switch to environment variables to make this a non-issue)
 
 ## 🛣️ Roadmap:
 
